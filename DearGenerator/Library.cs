@@ -50,7 +50,7 @@ public abstract class Library : ILibrary
                 ctx.IgnoreClassWithName(className);
                 return;
             case IgnoreType.Enum:
-                ctx.FindCompleteEnum(className).ExplicitlyIgnore();
+                ctx.FindCompleteEnum(className)?.ExplicitlyIgnore();
                 return;
             case IgnoreType.Function:
                 ctx.IgnoreFunctionWithName(memberName);

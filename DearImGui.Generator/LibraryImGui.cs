@@ -136,8 +136,8 @@ internal sealed class LibraryImGui : Library
         ns.FindTypedef("Action___IntPtr___IntPtr")
             .Name = "ImSetPlatformImeDataHandler";
 
-        ns.FindTypedef("Func_bool___IntPtr_int_sbytePtrPtr")
-            .Name = "ImItemsGetterHandler";
+        //ns.FindTypedef("Func_bool___IntPtr_int_sbytePtrPtr")
+        //    .Name = "ImItemsGetterHandler";
 
         ns.FindTypedef("Func_float___IntPtr_int")
             .Name = "ImValuesGetterHandler";

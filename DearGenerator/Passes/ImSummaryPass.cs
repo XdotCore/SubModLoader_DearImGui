@@ -87,11 +87,10 @@ public abstract class ImSummaryPass : TranslationUnitPass
 
         comments.RemoveAll(string.IsNullOrWhiteSpace);
 
-        comments.Add($@"{HeaderUrl}#L{start}");
-
         declaration.Comment = new RawComment
         {
-            BriefText = string.Join("<br/>", comments.Select(Normalize))
+            // Append to bypass normalization on the already normalized link
+            BriefText = string.Join("<br/>", comments.Select(Normalize).Append($@"<see href=""{HeaderUrl}#L{start}""/>"))
         };
     }
 
