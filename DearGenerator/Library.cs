@@ -50,7 +50,7 @@ public abstract class Library : ILibrary
                 ctx.IgnoreClassWithName(className);
                 return;
             case IgnoreType.Enum:
-                ctx.FindCompleteEnum(className)?.ExplicitlyIgnore();
+                ctx.FindCompleteEnum(className).ExplicitlyIgnore();
                 return;
             case IgnoreType.Function:
                 ctx.IgnoreFunctionWithName(memberName);
@@ -209,8 +209,8 @@ public abstract class Library : ILibrary
         Ignore(ctx, "ImVec4",     null, IgnoreType.Class); // manual
         Ignore(ctx, "ImVector",   null, IgnoreType.Class); // manual
 
-        Ignore(ctx, "ImGuiModFlags_", null, IgnoreType.Enum); // useless
-        Ignore(ctx, "ImGuiNavInput_", null, IgnoreType.Enum); // useless
+        //Ignore(ctx, "ImGuiModFlags_", null, IgnoreType.Enum); // useless
+        //Ignore(ctx, "ImGuiNavInput_", null, IgnoreType.Enum); // useless
 
         Ignore(ctx, "ImDrawCmd",   "GetTexID",       IgnoreType.Method); // manual
         Ignore(ctx, "ImDrawList",  "GetClipRectMax", IgnoreType.Method); // manual

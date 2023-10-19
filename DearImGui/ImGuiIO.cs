@@ -39,7 +39,8 @@ partial class ImGuiIO
         }
     }
 
-    public Vector2[] MouseDragMaxDistanceAbs
+    // Does not exist anymore
+    /*public Vector2[] MouseDragMaxDistanceAbs
     {
         get
         {
@@ -62,7 +63,7 @@ partial class ImGuiIO
                 Marshalling.Copy(((__Internal*)__Instance)->MouseDragMaxDistanceAbs, ref value);
             }
         }
-    }
+    }*/
 
     
 }
