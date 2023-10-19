@@ -165,6 +165,8 @@ public abstract class Library : ILibrary
         module.IncludeDirs.Add(@"..\..\..\..\imgui\imgui");
         module.Defines.Add("IMGUI_DISABLE_OBSOLETE_FUNCTIONS");
         module.Defines.Add("IMGUI_DISABLE_OBSOLETE_KEYIO");
+        module.Defines.Add("IMGUI_USE_WCHAR32");
+        module.Defines.Add("IMGUI_ENABLE_FREETYPE");
         module.Headers.Add("imgui.h");
     }
 
