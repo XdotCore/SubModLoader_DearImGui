@@ -13220,7 +13220,7 @@ namespace DearImGui
             internal int CmdListsCount;
             internal int TotalIdxCount;
             internal int TotalVtxCount;
-            internal ImVector<IntPtr>.__Internal CmdLists;
+            internal ImVector.__Internal CmdLists;
             internal Vector2 DisplayPos;
             internal Vector2 DisplaySize;
             internal Vector2 FramebufferScale;
