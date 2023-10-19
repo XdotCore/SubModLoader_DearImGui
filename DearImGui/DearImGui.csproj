@@ -31,30 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="$(MSBuildThisFileDirectory)..\build\x64\$(Configuration)\imgui.dll" Link="runtimes\win-x64\native\imgui.dll">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Visible>True</Visible>
-			<PackagePath>runtimes/win-x64/native</PackagePath>
-			<Pack>True</Pack>
-		</Content>
-		<Content Include="$(MSBuildThisFileDirectory)..\build\x64\$(Configuration)\imgui.pdb" Link="runtimes\win-x64\native\imgui.pdb">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Visible>True</Visible>
-			<PackagePath>runtimes/win-x64/native</PackagePath>
-			<Pack>True</Pack>
-		</Content>
-		<Content Include="$(MSBuildThisFileDirectory)..\build\x86\$(Configuration)\imgui.dll" Link="runtimes\win-x86\native\imgui.dll">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Visible>True</Visible>
-			<PackagePath>runtimes/win-x86/native</PackagePath>
-			<Pack>True</Pack>
-		</Content>
-		<Content Include="$(MSBuildThisFileDirectory)..\build\x86\$(Configuration)\imgui.pdb" Link="runtimes\win-x86\native\imgui.pdb">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Visible>True</Visible>
-			<PackagePath>runtimes/win-x86/native</PackagePath>
-			<Pack>True</Pack>
-		</Content>
+	  <Content Remove="C:\Users\xande\Documents\Documents\SubmachineMods\submodloader\SubModLoader_DearImGui\DearImGui\..\build\x64\Debug\imgui.dll" />
 	</ItemGroup>
 
 
