@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 namespace DearImGui;
 
 /// <summary>
-///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2505
+///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2505"/>
 /// </summary>
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 partial struct ImDrawList
@@ -20,7 +20,7 @@ partial struct ImDrawList
     }
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2535
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2535"/>
     /// </summary>
     public Vector2 ClipRectMin
     {
@@ -32,7 +32,7 @@ partial struct ImDrawList
     }
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2536
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2536"/>
     /// </summary>
     public Vector2 ClipRectMax
     {

@@ -5,14 +5,14 @@ using JetBrains.Annotations;
 namespace DearImGui;
 
 /// <summary>
-///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1905
+///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1905"/>
 /// </summary>
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 partial class ImGuiIO
 {
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2038
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2038"/>
     /// </summary>
     public Vector2[] MouseClickedPos
     {

@@ -3,7 +3,7 @@
 namespace DearImGui;
 
 /// <summary>
-///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2433
+///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2433"/>
 /// </summary>
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 partial class ImDrawCmdHeader

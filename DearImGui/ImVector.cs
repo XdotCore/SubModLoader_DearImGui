@@ -7,7 +7,7 @@ using JetBrains.Annotations;
 namespace DearImGui;
 
 /// <summary>
-///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1769
+///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1769"/>
 /// </summary>
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public readonly struct ImVector<T>
@@ -94,17 +94,17 @@ public readonly struct ImVector<T>
     }
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1771
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1771"/>
     /// </summary>
     public int Size => Internal.Size;
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1772
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1772"/>
     /// </summary>
     public int Capacity => Internal.Capacity;
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1773
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L1773"/>
     /// </summary>
     public IntPtr Data => Internal.Data;
 

@@ -5526,24 +5526,6 @@ namespace DearImGui
             }
         }
 
-        /// <summary>Parent UI context (needs to be set explicitly by parent).<br/><see href="https://github.com/ocornut/imgui/blob/83c433682883aaa6f9583a4a84d1ae4bd8d1e977/imgui.h#L2219"/></summary>
-        public IntPtr Ctx
-        {
-            get
-            {
-                return
-                /* DEBUG: TypeMapContext.CSharpMarshalToManaged: Function: False, ReturnVarName: True */
-                ;
-            }
-
-            set
-            {
-                ((__Internal*)__Instance)->Ctx = 
-                /* DEBUG: TypeMapContext.CSharpMarshalToNative: Function: False, ReturnVarName: True */
-                ;
-            }
-        }
-
         /// <summary>Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.).<br/><see href="https://github.com/ocornut/imgui/blob/83c433682883aaa6f9583a4a84d1ae4bd8d1e977/imgui.h#L2224"/></summary>
         public Vector2 MousePos
         {
@@ -6354,24 +6336,6 @@ namespace DearImGui
             else
             {
                 __Internal32.ClearSelection(__Instance);
-            }
-        }
-
-        /// <summary>Parent UI context.<br/><see href="https://github.com/ocornut/imgui/blob/83c433682883aaa6f9583a4a84d1ae4bd8d1e977/imgui.h#L2280"/></summary>
-        public IntPtr Ctx
-        {
-            get
-            {
-                return
-                /* DEBUG: TypeMapContext.CSharpMarshalToManaged: Function: False, ReturnVarName: True */
-                ;
-            }
-
-            set
-            {
-                ((__Internal*)__Instance)->Ctx = 
-                /* DEBUG: TypeMapContext.CSharpMarshalToNative: Function: False, ReturnVarName: True */
-                ;
             }
         }
 
@@ -10085,24 +10049,6 @@ namespace DearImGui
             }
         }
 
-        /// <summary>Parent UI context.<br/><see href="https://github.com/ocornut/imgui/blob/83c433682883aaa6f9583a4a84d1ae4bd8d1e977/imgui.h#L2526"/></summary>
-        public IntPtr Ctx
-        {
-            get
-            {
-                return
-                /* DEBUG: TypeMapContext.CSharpMarshalToManaged: Function: False, ReturnVarName: True */
-                ;
-            }
-
-            set
-            {
-                ((__Internal*)__Instance)->Ctx = 
-                /* DEBUG: TypeMapContext.CSharpMarshalToNative: Function: False, ReturnVarName: True */
-                ;
-            }
-        }
-
         /// <summary>First item to display, updated by each call to Step().<br/><see href="https://github.com/ocornut/imgui/blob/83c433682883aaa6f9583a4a84d1ae4bd8d1e977/imgui.h#L2527"/></summary>
         public int DisplayStart
         {
@@ -13274,7 +13220,7 @@ namespace DearImGui
             internal int CmdListsCount;
             internal int TotalIdxCount;
             internal int TotalVtxCount;
-            internal ImVector.__Internal CmdLists;
+            internal ImVector<IntPtr>.__Internal CmdLists;
             internal Vector2 DisplayPos;
             internal Vector2 DisplaySize;
             internal Vector2 FramebufferScale;

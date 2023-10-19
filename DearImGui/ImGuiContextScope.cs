@@ -3,7 +3,7 @@
 namespace DearImGui;
 
 /// <summary>
-///     Scope for temporarily switching imgui context.
+///     <see href="Scope for temporarily switching imgui context."/>
 /// </summary>
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public readonly struct ImGuiContextScope : IDisposable

@@ -4,28 +4,28 @@ using JetBrains.Annotations;
 namespace DearImGui;
 
 /// <summary>
-///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2633
+///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2633/"/>
 /// </summary>
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 partial struct ImDrawData
 {
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2640
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2640"/>
     /// </summary>
     public Vector2 DisplayPos => __Instance.DisplayPos;
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2641.
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2641."/>
     /// </summary>
     public Vector2 DisplaySize => __Instance.DisplaySize;
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2642.
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2642."/>
     /// </summary>
     public Vector2 FramebufferScale => __Instance.FramebufferScale;
 
     /// <summary>
-    ///     https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2639
+    ///     <see href="https://github.com/ocornut/imgui/blob/9aae45eb4a05a5a1f96be1ef37eb503a12ceb889/imgui.h#L2639"/>
     /// </summary>
     public unsafe int GetCmdLists([System.Diagnostics.CodeAnalysis.NotNull] ref ImDrawList[]? lists)
     {
@@ -36,7 +36,7 @@ partial struct ImDrawData
             Array.Resize(ref lists, count);
         }
 
-        var input = (IntPtr*)__Instance.CmdLists;
+        var input = (IntPtr*)__Instance.CmdLists.Data;
 
         for (var i = 0; i < count; i++)
         {

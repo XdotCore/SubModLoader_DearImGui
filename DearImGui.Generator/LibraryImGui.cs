@@ -93,9 +93,11 @@ internal sealed class LibraryImGui : Library
         Ignore(ctx, "ImFontGlyph",           "Codepoint",               IgnoreType.Property); // manual
         Ignore(ctx, "ImGuiIO",               "MouseClickedPos",         IgnoreType.Property); // manual
         Ignore(ctx, "ImGuiIO",               "MouseDragMaxDistanceAbs", IgnoreType.Property); // manual
-        Ignore(ctx, "ImGuiIO",               "Ctx",                     IgnoreType.Property); // manual
-        
         Ignore(ctx, "ImGuiStyle",            "Colors",                  IgnoreType.Property); // manual
+        
+        Ignore(ctx, "ImGuiIO",                    "Ctx", IgnoreType.Property);
+        Ignore(ctx, "ImGuiInputTextCallbackData", "Ctx", IgnoreType.Property);
+        Ignore(ctx, "ImGuiListClipper",           "Ctx", IgnoreType.Property);
 
         Ignore(ctx, "ImNewWrapper", null, IgnoreType.Class); // unused
 
