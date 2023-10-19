@@ -168,6 +168,8 @@ public abstract class Library : ILibrary
         module.Defines.Add("IMGUI_USE_WCHAR32");
         module.Defines.Add("IMGUI_ENABLE_FREETYPE");
         module.Headers.Add("imgui.h");
+        // Point to SubModLoader as imgui is packaged inside it
+        module.SharedLibraryName = "SubModLoaderNative";
     }
 
     #endregion

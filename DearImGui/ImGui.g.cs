@@ -2084,8 +2084,8 @@ namespace DearImGui
     // DEBUG: typedef unsigned int        ImU32
     // DEBUG: typedef int ImDrawListFlags
     // DEBUG: typedef int ImDrawFlags
-    // DEBUG: typedef unsigned short ImWchar16
-    // DEBUG: typedef ImWchar16 ImWchar
+    // DEBUG: typedef unsigned int ImWchar32
+    // DEBUG: typedef ImWchar32 ImWchar
     // DEBUG: typedef int ImFontAtlasFlags
     // DEBUG: typedef int ImGuiMouseCursor
     // DEBUG: typedef unsigned char       ImU8
@@ -2099,6 +2099,7 @@ namespace DearImGui
     // DEBUG: typedef int ImGuiKeyChord
     // DEBUG: typedef unsigned short      ImU16
     // DEBUG: typedef signed char         ImS8
+    // DEBUG: typedef unsigned short ImWchar16
     // DEBUG: typedef int ImGuiInputTextFlags
     // DEBUG: typedef unsigned int        ImGuiID
     // DEBUG: typedef int ImGuiDir
@@ -2129,7 +2130,6 @@ namespace DearImGui
     // DEBUG: typedef signed int          ImS32
     // DEBUG: typedef signed   long long  ImS64
     // DEBUG: typedef unsigned long long  ImU64
-    // DEBUG: typedef unsigned int ImWchar32
     /// <summary>Callback function for ImGui::InputText().<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L252"/></summary>
     // DEBUG: typedef int     (*ImGuiInputTextCallback)(ImGuiInputTextCallbackData* data)
     [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -2430,26 +2430,26 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStyle@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStyle@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStyle@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStyle@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ScaleAllSizes@ImGuiStyle@@QAEXM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ScaleAllSizes@ImGuiStyle@@QAEXM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ScaleAllSizes(IntPtr __instance, float scale_factor);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStyle@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStyle@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStyle@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStyle@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ScaleAllSizes@ImGuiStyle@@QEAAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ScaleAllSizes@ImGuiStyle@@QEAAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ScaleAllSizes(IntPtr __instance, float scale_factor);
 
         }
@@ -3367,14 +3367,14 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiKeyData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiKeyData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiKeyData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiKeyData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -3786,7 +3786,7 @@ namespace DearImGui
             internal IntPtr ClipboardUserData;
             internal IntPtr SetPlatformImeDataFn;
             internal IntPtr _UnusedPadding;
-            internal ushort PlatformLocaleDecimalPoint;
+            internal uint PlatformLocaleDecimalPoint;
             internal byte WantCaptureMouse;
             internal byte WantCaptureKeyboard;
             internal byte WantTextInput;
@@ -3839,110 +3839,110 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiIO@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiIO@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiIO@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiIO@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiIO@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiIO@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddKeyEvent@ImGuiIO@@QAEXW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddKeyEvent@ImGuiIO@@QAEXW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddKeyEvent(IntPtr __instance, ImGuiKey key, bool down);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddKeyAnalogEvent@ImGuiIO@@QAEXW4ImGuiKey@@_NM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddKeyAnalogEvent@ImGuiIO@@QAEXW4ImGuiKey@@_NM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddKeyAnalogEvent(IntPtr __instance, ImGuiKey key, bool down, float v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMousePosEvent@ImGuiIO@@QAEXMM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMousePosEvent@ImGuiIO@@QAEXMM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddMousePosEvent(IntPtr __instance, float x, float y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseButtonEvent@ImGuiIO@@QAEXH_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseButtonEvent@ImGuiIO@@QAEXH_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddMouseButtonEvent(IntPtr __instance, int button, bool down);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseWheelEvent@ImGuiIO@@QAEXMM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseWheelEvent@ImGuiIO@@QAEXMM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddMouseWheelEvent(IntPtr __instance, float wheel_x, float wheel_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseSourceEvent@ImGuiIO@@QAEXW4ImGuiMouseSource@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseSourceEvent@ImGuiIO@@QAEXW4ImGuiMouseSource@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddMouseSourceEvent(IntPtr __instance, ImGuiMouseSource source);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFocusEvent@ImGuiIO@@QAEX_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFocusEvent@ImGuiIO@@QAEX_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddFocusEvent(IntPtr __instance, bool focused);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharacter@ImGuiIO@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharacter@ImGuiIO@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddInputCharacter(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharacterUTF16@ImGuiIO@@QAEXG@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharacterUTF16@ImGuiIO@@QAEXG@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddInputCharacterUTF16(IntPtr __instance, ushort c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharactersUTF8@ImGuiIO@@QAEXPBD@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharactersUTF8@ImGuiIO@@QAEXPBD@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddInputCharactersUTF8(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetKeyEventNativeData@ImGuiIO@@QAEXW4ImGuiKey@@HHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetKeyEventNativeData@ImGuiIO@@QAEXW4ImGuiKey@@HHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetKeyEventNativeData(IntPtr __instance, ImGuiKey key, int native_keycode, int native_scancode, int native_legacy_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAppAcceptingEvents@ImGuiIO@@QAEX_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAppAcceptingEvents@ImGuiIO@@QAEX_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetAppAcceptingEvents(IntPtr __instance, bool accepting_events);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearEventsQueue@ImGuiIO@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearEventsQueue@ImGuiIO@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearEventsQueue(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearInputKeys@ImGuiIO@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearInputKeys@ImGuiIO@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearInputKeys(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiIO@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiIO@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiIO@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiIO@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiIO@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiIO@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddKeyEvent@ImGuiIO@@QEAAXW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddKeyEvent@ImGuiIO@@QEAAXW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddKeyEvent(IntPtr __instance, ImGuiKey key, bool down);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddKeyAnalogEvent@ImGuiIO@@QEAAXW4ImGuiKey@@_NM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddKeyAnalogEvent@ImGuiIO@@QEAAXW4ImGuiKey@@_NM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddKeyAnalogEvent(IntPtr __instance, ImGuiKey key, bool down, float v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMousePosEvent@ImGuiIO@@QEAAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMousePosEvent@ImGuiIO@@QEAAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddMousePosEvent(IntPtr __instance, float x, float y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseButtonEvent@ImGuiIO@@QEAAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseButtonEvent@ImGuiIO@@QEAAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddMouseButtonEvent(IntPtr __instance, int button, bool down);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseWheelEvent@ImGuiIO@@QEAAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseWheelEvent@ImGuiIO@@QEAAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddMouseWheelEvent(IntPtr __instance, float wheel_x, float wheel_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddMouseSourceEvent@ImGuiIO@@QEAAXW4ImGuiMouseSource@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddMouseSourceEvent@ImGuiIO@@QEAAXW4ImGuiMouseSource@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddMouseSourceEvent(IntPtr __instance, ImGuiMouseSource source);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFocusEvent@ImGuiIO@@QEAAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFocusEvent@ImGuiIO@@QEAAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddFocusEvent(IntPtr __instance, bool focused);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharacter@ImGuiIO@@QEAAXI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharacter@ImGuiIO@@QEAAXI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddInputCharacter(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharacterUTF16@ImGuiIO@@QEAAXG@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharacterUTF16@ImGuiIO@@QEAAXG@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddInputCharacterUTF16(IntPtr __instance, ushort c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddInputCharactersUTF8@ImGuiIO@@QEAAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddInputCharactersUTF8@ImGuiIO@@QEAAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddInputCharactersUTF8(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetKeyEventNativeData@ImGuiIO@@QEAAXW4ImGuiKey@@HHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetKeyEventNativeData@ImGuiIO@@QEAAXW4ImGuiKey@@HHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetKeyEventNativeData(IntPtr __instance, ImGuiKey key, int native_keycode, int native_scancode, int native_legacy_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAppAcceptingEvents@ImGuiIO@@QEAAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAppAcceptingEvents@ImGuiIO@@QEAAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetAppAcceptingEvents(IntPtr __instance, bool accepting_events);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearEventsQueue@ImGuiIO@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearEventsQueue@ImGuiIO@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearEventsQueue(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearInputKeys@ImGuiIO@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearInputKeys@ImGuiIO@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearInputKeys(IntPtr __instance);
 
         }
@@ -4930,7 +4930,7 @@ namespace DearImGui
         }
 
         /// <summary>'.'.<br/>[Experimental] Configure decimal point e.g. '.' or ',' useful for some languages (e.g. German), generally pulled from *localeconv()-&gt;decimal_point.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2048"/></summary>
-        public ushort PlatformLocaleDecimalPoint
+        public uint PlatformLocaleDecimalPoint
         {
             get
             {
@@ -5654,11 +5654,11 @@ namespace DearImGui
         }
 
         /// <summary>Queue of _characters_ input (obtained by platform backend). Fill using AddInputCharacter() helper.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2147"/></summary>
-        public ImVector<ushort> InputQueueCharacters
+        public ImVector<uint> InputQueueCharacters
         {
             get
             {
-                return new ImVector<ushort>(Unsafe.As<ImVector.__Internal, ImVector<ushort>.__Internal>(ref ((__Internal*)__Instance)->InputQueueCharacters))
+                return new ImVector<uint>(Unsafe.As<ImVector.__Internal, ImVector<uint>.__Internal>(ref ((__Internal*)__Instance)->InputQueueCharacters))
                 /* DEBUG: TypeMapImVector.CSharpMarshalToManaged: Function: False, ReturnVarName: True */
                 ;
             }
@@ -5704,7 +5704,7 @@ namespace DearImGui
             internal ImGuiInputTextFlags EventFlag;
             internal ImGuiInputTextFlags Flags;
             internal IntPtr UserData;
-            internal ushort EventChar;
+            internal uint EventChar;
             internal ImGuiKey EventKey;
             internal IntPtr Buf;
             internal int BufTextLen;
@@ -5717,25 +5717,25 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiInputTextCallbackData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiInputTextCallbackData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiInputTextCallbackData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiInputTextCallbackData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DeleteChars@ImGuiInputTextCallbackData@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DeleteChars@ImGuiInputTextCallbackData@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void DeleteChars(IntPtr __instance, int pos, int bytes_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InsertChars@ImGuiInputTextCallbackData@@QAEXHPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InsertChars@ImGuiInputTextCallbackData@@QAEXHPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void InsertChars(IntPtr __instance, int pos, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SelectAll@ImGuiInputTextCallbackData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SelectAll@ImGuiInputTextCallbackData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SelectAll(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearSelection@ImGuiInputTextCallbackData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearSelection@ImGuiInputTextCallbackData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearSelection(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?HasSelection@ImGuiInputTextCallbackData@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?HasSelection@ImGuiInputTextCallbackData@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool HasSelection(IntPtr __instance);
 
@@ -5743,25 +5743,25 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiInputTextCallbackData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiInputTextCallbackData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiInputTextCallbackData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiInputTextCallbackData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DeleteChars@ImGuiInputTextCallbackData@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DeleteChars@ImGuiInputTextCallbackData@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DeleteChars(IntPtr __instance, int pos, int bytes_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InsertChars@ImGuiInputTextCallbackData@@QEAAXHPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InsertChars@ImGuiInputTextCallbackData@@QEAAXHPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void InsertChars(IntPtr __instance, int pos, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SelectAll@ImGuiInputTextCallbackData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SelectAll@ImGuiInputTextCallbackData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SelectAll(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearSelection@ImGuiInputTextCallbackData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearSelection@ImGuiInputTextCallbackData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearSelection(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?HasSelection@ImGuiInputTextCallbackData@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?HasSelection@ImGuiInputTextCallbackData@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool HasSelection(IntPtr __instance);
 
@@ -5987,7 +5987,7 @@ namespace DearImGui
         }
 
         /// <summary>Character input.<br/>Read-write.<br/>[CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2175"/></summary>
-        public ushort EventChar
+        public uint EventChar
         {
             get
             {
@@ -6144,20 +6144,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiSizeCallbackData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiSizeCallbackData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiSizeCallbackData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiSizeCallbackData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiSizeCallbackData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiSizeCallbackData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiSizeCallbackData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiSizeCallbackData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -6396,24 +6396,24 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPayload@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPayload@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPayload@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPayload@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiPayload@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiPayload@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsDataType@ImGuiPayload@@QBE_NPBD@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsDataType@ImGuiPayload@@QBE_NPBD@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsDataType(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPreview@ImGuiPayload@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPreview@ImGuiPayload@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPreview(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsDelivery@ImGuiPayload@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsDelivery@ImGuiPayload@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsDelivery(IntPtr __instance);
 
@@ -6421,24 +6421,24 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPayload@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPayload@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPayload@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPayload@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiPayload@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiPayload@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsDataType@ImGuiPayload@@QEBA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsDataType@ImGuiPayload@@QEBA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsDataType(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPreview@ImGuiPayload@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPreview@ImGuiPayload@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPreview(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsDelivery@ImGuiPayload@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsDelivery@ImGuiPayload@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsDelivery(IntPtr __instance);
 
@@ -6747,20 +6747,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableColumnSortSpecs@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -6964,20 +6964,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableSortSpecs@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableSortSpecs@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableSortSpecs@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableSortSpecs@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableSortSpecs@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableSortSpecs@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTableSortSpecs@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTableSortSpecs@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -7159,13 +7159,13 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiOnceUponAFrame@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiOnceUponAFrame@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiOnceUponAFrame@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiOnceUponAFrame@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??BImGuiOnceUponAFrame@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??BImGuiOnceUponAFrame@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool OperatorConversion(IntPtr __instance);
 
@@ -7173,13 +7173,13 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiOnceUponAFrame@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiOnceUponAFrame@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiOnceUponAFrame@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiOnceUponAFrame@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??BImGuiOnceUponAFrame@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??BImGuiOnceUponAFrame@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool OperatorConversion(IntPtr __instance);
 
@@ -7369,30 +7369,30 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextFilter@@QAE@PBD@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextFilter@@QAE@PBD@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string default_filter);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextFilter@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextFilter@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiTextFilter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiTextFilter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Draw@ImGuiTextFilter@@QAE_NPBDM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Draw@ImGuiTextFilter@@QAE_NPBDM@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Draw(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PassFilter@ImGuiTextFilter@@QBE_NPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PassFilter@ImGuiTextFilter@@QBE_NPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool PassFilter(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Build@ImGuiTextFilter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Build@ImGuiTextFilter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Build(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiTextFilter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiTextFilter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsActive@ImGuiTextFilter@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsActive@ImGuiTextFilter@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsActive(IntPtr __instance);
 
@@ -7400,30 +7400,30 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextFilter@@QEAA@PEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextFilter@@QEAA@PEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string default_filter);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextFilter@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextFilter@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiTextFilter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiTextFilter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Draw@ImGuiTextFilter@@QEAA_NPEBDM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Draw@ImGuiTextFilter@@QEAA_NPEBDM@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Draw(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PassFilter@ImGuiTextFilter@@QEBA_NPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PassFilter@ImGuiTextFilter@@QEBA_NPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool PassFilter(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Build@ImGuiTextFilter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Build@ImGuiTextFilter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Build(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiTextFilter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiTextFilter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsActive@ImGuiTextFilter@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsActive@ImGuiTextFilter@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsActive(IntPtr __instance);
 
@@ -7451,19 +7451,19 @@ namespace DearImGui
 
             private partial struct __Internal32
             {
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@PBD0@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@PBD0@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string _b, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string _e);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@$$QAU01@@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QAE@$$QAU01@@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?split@ImGuiTextRange@ImGuiTextFilter@@QBEXDPAU?$ImVector@UImGuiTextRange@ImGuiTextFilter@@@@@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?split@ImGuiTextRange@ImGuiTextFilter@@QBEXDPAU?$ImVector@UImGuiTextRange@ImGuiTextFilter@@@@@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern void Split(IntPtr __instance, sbyte separator, IntPtr @out);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?empty@ImGuiTextRange@ImGuiTextFilter@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?empty@ImGuiTextRange@ImGuiTextFilter@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
                 [return: MarshalAs(UnmanagedType.I1)]
                 internal static extern bool Empty(IntPtr __instance);
 
@@ -7471,19 +7471,19 @@ namespace DearImGui
 
             private partial struct __Internal64
             {
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@PEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@PEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string _b, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string _e);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@$$QEAU01@@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextRange@ImGuiTextFilter@@QEAA@$$QEAU01@@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?split@ImGuiTextRange@ImGuiTextFilter@@QEBAXDPEAU?$ImVector@UImGuiTextRange@ImGuiTextFilter@@@@@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?split@ImGuiTextRange@ImGuiTextFilter@@QEBAXDPEAU?$ImVector@UImGuiTextRange@ImGuiTextFilter@@@@@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern void Split(IntPtr __instance, sbyte separator, IntPtr @out);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?empty@ImGuiTextRange@ImGuiTextFilter@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?empty@ImGuiTextRange@ImGuiTextFilter@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
                 [return: MarshalAs(UnmanagedType.I1)]
                 internal static extern bool Empty(IntPtr __instance);
 
@@ -7979,94 +7979,94 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextBuffer@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextBuffer@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextBuffer@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextBuffer@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiTextBuffer@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiTextBuffer@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?begin@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?begin@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr Begin(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?end@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?end@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr End(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?clear@ImGuiTextBuffer@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?clear@ImGuiTextBuffer@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?reserve@ImGuiTextBuffer@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?reserve@ImGuiTextBuffer@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Reserve(IntPtr __instance, int capacity);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?append@ImGuiTextBuffer@@QAEXPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?append@ImGuiTextBuffer@@QAEXPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Append(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?appendf@ImGuiTextBuffer@@QAAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?appendf@ImGuiTextBuffer@@QAAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Appendf(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?appendfv@ImGuiTextBuffer@@QAEXPBDPAD@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?appendfv@ImGuiTextBuffer@@QAEXPBDPAD@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Appendfv(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??AImGuiTextBuffer@@QBEDH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??AImGuiTextBuffer@@QBEDH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern sbyte OperatorSubscript(IntPtr __instance, int i);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?size@ImGuiTextBuffer@@QBEHXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?size@ImGuiTextBuffer@@QBEHXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern int Size(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?empty@ImGuiTextBuffer@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?empty@ImGuiTextBuffer@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Empty(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?c_str@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?c_str@ImGuiTextBuffer@@QBEPBDXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr CStr(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextBuffer@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextBuffer@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiTextBuffer@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiTextBuffer@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiTextBuffer@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiTextBuffer@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?begin@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?begin@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr Begin(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?end@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?end@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr End(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?clear@ImGuiTextBuffer@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?clear@ImGuiTextBuffer@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?reserve@ImGuiTextBuffer@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?reserve@ImGuiTextBuffer@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Reserve(IntPtr __instance, int capacity);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?append@ImGuiTextBuffer@@QEAAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?append@ImGuiTextBuffer@@QEAAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Append(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?appendf@ImGuiTextBuffer@@QEAAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?appendf@ImGuiTextBuffer@@QEAAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Appendf(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?appendfv@ImGuiTextBuffer@@QEAAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?appendfv@ImGuiTextBuffer@@QEAAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Appendfv(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??AImGuiTextBuffer@@QEBADH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??AImGuiTextBuffer@@QEBADH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern sbyte OperatorSubscript(IntPtr __instance, int i);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?size@ImGuiTextBuffer@@QEBAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?size@ImGuiTextBuffer@@QEBAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int Size(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?empty@ImGuiTextBuffer@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?empty@ImGuiTextBuffer@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Empty(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?c_str@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?c_str@ImGuiTextBuffer@@QEBAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr CStr(IntPtr __instance);
 
         }
@@ -8294,7 +8294,7 @@ namespace DearImGui
         {
             get
             {
-                var __ptr = (sbyte*)ImGui._EmptyString_ImGuiTextBuffer__2PADA;
+                var __ptr = (sbyte*)SubModLoaderNative._EmptyString_ImGuiTextBuffer__2PADA;
                 return CppSharp.Runtime.MarshalUtil.GetCharArray(__ptr, 1);
             }
         }
@@ -8403,118 +8403,118 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStorage@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStorage@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStorage@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStorage@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiStorage@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiStorage@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiStorage@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiStorage@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetInt@ImGuiStorage@@QBEHIH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetInt@ImGuiStorage@@QBEHIH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern int GetInt(IntPtr __instance, uint key, int default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetInt@ImGuiStorage@@QAEXIH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetInt@ImGuiStorage@@QAEXIH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetInt(IntPtr __instance, uint key, int val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBool@ImGuiStorage@@QBE_NI_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBool@ImGuiStorage@@QBE_NI_N@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetBool(IntPtr __instance, uint key, bool default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetBool@ImGuiStorage@@QAEXI_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetBool@ImGuiStorage@@QAEXI_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetBool(IntPtr __instance, uint key, bool val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFloat@ImGuiStorage@@QBEMIM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFloat@ImGuiStorage@@QBEMIM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern float GetFloat(IntPtr __instance, uint key, float default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetFloat@ImGuiStorage@@QAEXIM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetFloat@ImGuiStorage@@QAEXIM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetFloat(IntPtr __instance, uint key, float val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVoidPtr@ImGuiStorage@@QBEPAXI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVoidPtr@ImGuiStorage@@QBEPAXI@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr GetVoidPtr(IntPtr __instance, uint key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetVoidPtr@ImGuiStorage@@QAEXIPAX@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetVoidPtr@ImGuiStorage@@QAEXIPAX@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetVoidPtr(IntPtr __instance, uint key, IntPtr val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetIntRef@ImGuiStorage@@QAEPAHIH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetIntRef@ImGuiStorage@@QAEPAHIH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern int* GetIntRef(IntPtr __instance, uint key, int default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBoolRef@ImGuiStorage@@QAEPA_NI_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBoolRef@ImGuiStorage@@QAEPA_NI_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern bool* GetBoolRef(IntPtr __instance, uint key, bool default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFloatRef@ImGuiStorage@@QAEPAMIM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFloatRef@ImGuiStorage@@QAEPAMIM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern float* GetFloatRef(IntPtr __instance, uint key, float default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVoidPtrRef@ImGuiStorage@@QAEPAPAXIPAX@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVoidPtrRef@ImGuiStorage@@QAEPAPAXIPAX@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr* GetVoidPtrRef(IntPtr __instance, uint key, IntPtr default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAllInt@ImGuiStorage@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAllInt@ImGuiStorage@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetAllInt(IntPtr __instance, int val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildSortByKey@ImGuiStorage@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildSortByKey@ImGuiStorage@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void BuildSortByKey(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStorage@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStorage@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStorage@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStorage@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiStorage@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiStorage@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImGuiStorage@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImGuiStorage@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetInt@ImGuiStorage@@QEBAHIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetInt@ImGuiStorage@@QEBAHIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetInt(IntPtr __instance, uint key, int default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetInt@ImGuiStorage@@QEAAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetInt@ImGuiStorage@@QEAAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetInt(IntPtr __instance, uint key, int val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBool@ImGuiStorage@@QEBA_NI_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBool@ImGuiStorage@@QEBA_NI_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetBool(IntPtr __instance, uint key, bool default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetBool@ImGuiStorage@@QEAAXI_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetBool@ImGuiStorage@@QEAAXI_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetBool(IntPtr __instance, uint key, bool val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFloat@ImGuiStorage@@QEBAMIM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFloat@ImGuiStorage@@QEBAMIM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFloat(IntPtr __instance, uint key, float default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetFloat@ImGuiStorage@@QEAAXIM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetFloat@ImGuiStorage@@QEAAXIM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetFloat(IntPtr __instance, uint key, float val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVoidPtr@ImGuiStorage@@QEBAPEAXI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVoidPtr@ImGuiStorage@@QEBAPEAXI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetVoidPtr(IntPtr __instance, uint key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetVoidPtr@ImGuiStorage@@QEAAXIPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetVoidPtr@ImGuiStorage@@QEAAXIPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetVoidPtr(IntPtr __instance, uint key, IntPtr val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetIntRef@ImGuiStorage@@QEAAPEAHIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetIntRef@ImGuiStorage@@QEAAPEAHIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int* GetIntRef(IntPtr __instance, uint key, int default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBoolRef@ImGuiStorage@@QEAAPEA_NI_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBoolRef@ImGuiStorage@@QEAAPEA_NI_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern bool* GetBoolRef(IntPtr __instance, uint key, bool default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFloatRef@ImGuiStorage@@QEAAPEAMIM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFloatRef@ImGuiStorage@@QEAAPEAMIM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float* GetFloatRef(IntPtr __instance, uint key, float default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVoidPtrRef@ImGuiStorage@@QEAAPEAPEAXIPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVoidPtrRef@ImGuiStorage@@QEAAPEAPEAXIPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr* GetVoidPtrRef(IntPtr __instance, uint key, IntPtr default_val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAllInt@ImGuiStorage@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAllInt@ImGuiStorage@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetAllInt(IntPtr __instance, int val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildSortByKey@ImGuiStorage@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildSortByKey@ImGuiStorage@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BuildSortByKey(IntPtr __instance);
 
         }
@@ -8545,32 +8545,32 @@ namespace DearImGui
 
             private partial struct __Internal32
             {
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IH@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IH@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance, uint _key, int _val_i);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IM@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IM@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor_1(IntPtr __instance, uint _key, float _val_f);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IPAX@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@IPAX@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance, uint _key, IntPtr _val_p);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@$$QAU01@@Z", CallingConvention = CallingConvention.ThisCall)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QAE@$$QAU01@@Z", CallingConvention = CallingConvention.ThisCall)]
                 internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
             }
 
             private partial struct __Internal64
             {
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IH@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IH@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance, uint _key, int _val_i);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IM@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IM@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor_1(IntPtr __instance, uint _key, float _val_f);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@IPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance, uint _key, IntPtr _val_p);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@$$QEAU01@@Z", CallingConvention = CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiStoragePair@ImGuiStorage@@QEAA@$$QEAU01@@Z", CallingConvention = CallingConvention.Cdecl)]
                 internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
             }
@@ -9138,28 +9138,28 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiListClipper@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiListClipper@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiListClipper@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiListClipper@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiListClipper@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiListClipper@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Begin@ImGuiListClipper@@QAEXHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Begin@ImGuiListClipper@@QAEXHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Begin(IntPtr __instance, int items_count, float items_height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?End@ImGuiListClipper@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?End@ImGuiListClipper@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void End(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IncludeItemByIndex@ImGuiListClipper@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IncludeItemByIndex@ImGuiListClipper@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void IncludeItemByIndex(IntPtr __instance, int item_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IncludeItemsByIndex@ImGuiListClipper@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IncludeItemsByIndex@ImGuiListClipper@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void IncludeItemsByIndex(IntPtr __instance, int item_begin, int item_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Step@ImGuiListClipper@@QAE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Step@ImGuiListClipper@@QAE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Step(IntPtr __instance);
 
@@ -9167,28 +9167,28 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiListClipper@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiListClipper@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiListClipper@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiListClipper@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImGuiListClipper@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImGuiListClipper@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Begin@ImGuiListClipper@@QEAAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Begin@ImGuiListClipper@@QEAAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Begin(IntPtr __instance, int items_count, float items_height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?End@ImGuiListClipper@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?End@ImGuiListClipper@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void End(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IncludeItemByIndex@ImGuiListClipper@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IncludeItemByIndex@ImGuiListClipper@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void IncludeItemByIndex(IntPtr __instance, int item_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IncludeItemsByIndex@ImGuiListClipper@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IncludeItemsByIndex@ImGuiListClipper@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void IncludeItemsByIndex(IntPtr __instance, int item_begin, int item_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Step@ImGuiListClipper@@QEAA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Step@ImGuiListClipper@@QEAA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Step(IntPtr __instance);
 
@@ -9498,20 +9498,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmd@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmd@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmd@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmd@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmd@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmd@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmd@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmd@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -9663,20 +9663,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmdHeader@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmdHeader@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmdHeader@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmdHeader@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmdHeader@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmdHeader@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawCmdHeader@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawCmdHeader@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
         }
@@ -9868,26 +9868,26 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawChannel@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawChannel@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawChannel@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawChannel@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawChannel@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawChannel@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawChannel@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawChannel@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawChannel@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawChannel@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawChannel@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawChannel@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
         }
@@ -10073,56 +10073,56 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawListSplitter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawListSplitter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawListSplitter@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawListSplitter@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawListSplitter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawListSplitter@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImDrawListSplitter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImDrawListSplitter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearFreeMemory@ImDrawListSplitter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearFreeMemory@ImDrawListSplitter@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearFreeMemory(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Split@ImDrawListSplitter@@QAEXPAUImDrawList@@H@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Split@ImDrawListSplitter@@QAEXPAUImDrawList@@H@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Split(IntPtr __instance, IntPtr draw_list, int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Merge@ImDrawListSplitter@@QAEXPAUImDrawList@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Merge@ImDrawListSplitter@@QAEXPAUImDrawList@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Merge(IntPtr __instance, IntPtr draw_list);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCurrentChannel@ImDrawListSplitter@@QAEXPAUImDrawList@@H@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCurrentChannel@ImDrawListSplitter@@QAEXPAUImDrawList@@H@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetCurrentChannel(IntPtr __instance, IntPtr draw_list, int channel_idx);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawListSplitter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawListSplitter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawListSplitter@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawListSplitter@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawListSplitter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawListSplitter@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImDrawListSplitter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImDrawListSplitter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearFreeMemory@ImDrawListSplitter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearFreeMemory@ImDrawListSplitter@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearFreeMemory(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Split@ImDrawListSplitter@@QEAAXPEAUImDrawList@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Split@ImDrawListSplitter@@QEAAXPEAUImDrawList@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Split(IntPtr __instance, IntPtr draw_list, int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Merge@ImDrawListSplitter@@QEAAXPEAUImDrawList@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Merge@ImDrawListSplitter@@QEAAXPEAUImDrawList@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Merge(IntPtr __instance, IntPtr draw_list);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCurrentChannel@ImDrawListSplitter@@QEAAXPEAUImDrawList@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCurrentChannel@ImDrawListSplitter@@QEAAXPEAUImDrawList@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCurrentChannel(IntPtr __instance, IntPtr draw_list, int channel_idx);
 
         }
@@ -10530,386 +10530,386 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawList@@QAE@PAUImDrawListSharedData@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawList@@QAE@PAUImDrawListSharedData@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr shared_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawList@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawList@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr cctor_1(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawList@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawList@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRect@ImDrawList@@QAEXABUImVec2@@0_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRect@ImDrawList@@QAEXABUImVec2@@0_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PushClipRect(IntPtr __instance, IntPtr clip_rect_min, IntPtr clip_rect_max, bool intersect_with_current_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRectFullScreen@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRectFullScreen@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PushClipRectFullScreen(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopClipRect@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopClipRect@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PopClipRect(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTextureID@ImDrawList@@QAEXPAX@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTextureID@ImDrawList@@QAEXPAX@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PushTextureID(IntPtr __instance, IntPtr texture_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTextureID@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTextureID@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PopTextureID(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddLine@ImDrawList@@QAEXABUImVec2@@0IM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddLine@ImDrawList@@QAEXABUImVec2@@0IM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddLine(IntPtr __instance, IntPtr p1, IntPtr p2, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRect@ImDrawList@@QAEXABUImVec2@@0IMHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRect@ImDrawList@@QAEXABUImVec2@@0IMHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddRect(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col, float rounding, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRectFilled@ImDrawList@@QAEXABUImVec2@@0IMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRectFilled@ImDrawList@@QAEXABUImVec2@@0IMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddRectFilled(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRectFilledMultiColor@ImDrawList@@QAEXABUImVec2@@0IIII@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRectFilledMultiColor@ImDrawList@@QAEXABUImVec2@@0IIII@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddRectFilledMultiColor(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col_upr_left, uint col_upr_right, uint col_bot_right, uint col_bot_left);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddQuad@ImDrawList@@QAEXABUImVec2@@000IM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddQuad@ImDrawList@@QAEXABUImVec2@@000IM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddQuad(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddQuadFilled@ImDrawList@@QAEXABUImVec2@@000I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddQuadFilled@ImDrawList@@QAEXABUImVec2@@000I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddQuadFilled(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddTriangle@ImDrawList@@QAEXABUImVec2@@00IM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddTriangle@ImDrawList@@QAEXABUImVec2@@00IM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddTriangle(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddTriangleFilled@ImDrawList@@QAEXABUImVec2@@00I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddTriangleFilled@ImDrawList@@QAEXABUImVec2@@00I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddTriangleFilled(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCircle@ImDrawList@@QAEXABUImVec2@@MIHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCircle@ImDrawList@@QAEXABUImVec2@@MIHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddCircle(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCircleFilled@ImDrawList@@QAEXABUImVec2@@MIH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCircleFilled@ImDrawList@@QAEXABUImVec2@@MIH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddCircleFilled(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddNgon@ImDrawList@@QAEXABUImVec2@@MIHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddNgon@ImDrawList@@QAEXABUImVec2@@MIHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddNgon(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddNgonFilled@ImDrawList@@QAEXABUImVec2@@MIH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddNgonFilled@ImDrawList@@QAEXABUImVec2@@MIH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddNgonFilled(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImDrawList@@QAEXABUImVec2@@IPBD1@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImDrawList@@QAEXABUImVec2@@IPBD1@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddText(IntPtr __instance, IntPtr pos, uint col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImDrawList@@QAEXPBUImFont@@MABUImVec2@@IPBD2MPBUImVec4@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImDrawList@@QAEXPBUImFont@@MABUImVec2@@IPBD2MPBUImVec4@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddText(IntPtr __instance, IntPtr font, float font_size, IntPtr pos, uint col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width, IntPtr cpu_fine_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddPolyline@ImDrawList@@QAEXPBUImVec2@@HIHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddPolyline@ImDrawList@@QAEXPBUImVec2@@HIHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddPolyline(IntPtr __instance, IntPtr points, int num_points, uint col, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddConvexPolyFilled@ImDrawList@@QAEXPBUImVec2@@HI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddConvexPolyFilled@ImDrawList@@QAEXPBUImVec2@@HI@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddConvexPolyFilled(IntPtr __instance, IntPtr points, int num_points, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddBezierCubic@ImDrawList@@QAEXABUImVec2@@000IMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddBezierCubic@ImDrawList@@QAEXABUImVec2@@000IMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddBezierCubic(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col, float thickness, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddBezierQuadratic@ImDrawList@@QAEXABUImVec2@@00IMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddBezierQuadratic@ImDrawList@@QAEXABUImVec2@@00IMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddBezierQuadratic(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col, float thickness, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImage@ImDrawList@@QAEXPAXABUImVec2@@111I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImage@ImDrawList@@QAEXPAXABUImVec2@@111I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddImage(IntPtr __instance, IntPtr user_texture_id, IntPtr p_min, IntPtr p_max, IntPtr uv_min, IntPtr uv_max, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImageQuad@ImDrawList@@QAEXPAXABUImVec2@@1111111I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImageQuad@ImDrawList@@QAEXPAXABUImVec2@@1111111I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddImageQuad(IntPtr __instance, IntPtr user_texture_id, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, IntPtr uv1, IntPtr uv2, IntPtr uv3, IntPtr uv4, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImageRounded@ImDrawList@@QAEXPAXABUImVec2@@111IMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImageRounded@ImDrawList@@QAEXPAXABUImVec2@@111IMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddImageRounded(IntPtr __instance, IntPtr user_texture_id, IntPtr p_min, IntPtr p_max, IntPtr uv_min, IntPtr uv_max, uint col, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathClear@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathClear@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathClear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathLineTo@ImDrawList@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathLineTo@ImDrawList@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathLineTo(IntPtr __instance, IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathLineToMergeDuplicate@ImDrawList@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathLineToMergeDuplicate@ImDrawList@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathLineToMergeDuplicate(IntPtr __instance, IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathFillConvex@ImDrawList@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathFillConvex@ImDrawList@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathFillConvex(IntPtr __instance, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathStroke@ImDrawList@@QAEXIHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathStroke@ImDrawList@@QAEXIHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathStroke(IntPtr __instance, uint col, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathArcTo@ImDrawList@@QAEXABUImVec2@@MMMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathArcTo@ImDrawList@@QAEXABUImVec2@@MMMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathArcTo(IntPtr __instance, IntPtr center, float radius, float a_min, float a_max, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathArcToFast@ImDrawList@@QAEXABUImVec2@@MHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathArcToFast@ImDrawList@@QAEXABUImVec2@@MHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathArcToFast(IntPtr __instance, IntPtr center, float radius, int a_min_of_12, int a_max_of_12);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathBezierCubicCurveTo@ImDrawList@@QAEXABUImVec2@@00H@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathBezierCubicCurveTo@ImDrawList@@QAEXABUImVec2@@00H@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathBezierCubicCurveTo(IntPtr __instance, IntPtr p2, IntPtr p3, IntPtr p4, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathBezierQuadraticCurveTo@ImDrawList@@QAEXABUImVec2@@0H@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathBezierQuadraticCurveTo@ImDrawList@@QAEXABUImVec2@@0H@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathBezierQuadraticCurveTo(IntPtr __instance, IntPtr p2, IntPtr p3, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathRect@ImDrawList@@QAEXABUImVec2@@0MH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathRect@ImDrawList@@QAEXABUImVec2@@0MH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathRect(IntPtr __instance, IntPtr rect_min, IntPtr rect_max, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCallback@ImDrawList@@QAEXP6AXPBU1@PBUImDrawCmd@@@ZPAX@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCallback@ImDrawList@@QAEXP6AXPBU1@PBUImDrawCmd@@@ZPAX@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddCallback(IntPtr __instance, IntPtr callback, IntPtr callback_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddDrawCmd@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddDrawCmd@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddDrawCmd(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CloneOutput@ImDrawList@@QBEPAU1@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CloneOutput@ImDrawList@@QBEPAU1@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr CloneOutput(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsSplit@ImDrawList@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsSplit@ImDrawList@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ChannelsSplit(IntPtr __instance, int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsMerge@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsMerge@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ChannelsMerge(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsSetCurrent@ImDrawList@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsSetCurrent@ImDrawList@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ChannelsSetCurrent(IntPtr __instance, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimReserve@ImDrawList@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimReserve@ImDrawList@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimReserve(IntPtr __instance, int idx_count, int vtx_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimUnreserve@ImDrawList@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimUnreserve@ImDrawList@@QAEXHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimUnreserve(IntPtr __instance, int idx_count, int vtx_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimRect@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimRect@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimRect(IntPtr __instance, IntPtr a, IntPtr b, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimRectUV@ImDrawList@@QAEXABUImVec2@@000I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimRectUV@ImDrawList@@QAEXABUImVec2@@000I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimRectUV(IntPtr __instance, IntPtr a, IntPtr b, IntPtr uv_a, IntPtr uv_b, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimQuadUV@ImDrawList@@QAEXABUImVec2@@0000000I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimQuadUV@ImDrawList@@QAEXABUImVec2@@0000000I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimQuadUV(IntPtr __instance, IntPtr a, IntPtr b, IntPtr c, IntPtr d, IntPtr uv_a, IntPtr uv_b, IntPtr uv_c, IntPtr uv_d, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimWriteVtx@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimWriteVtx@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimWriteVtx(IntPtr __instance, IntPtr pos, IntPtr uv, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimWriteIdx@ImDrawList@@QAEXG@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimWriteIdx@ImDrawList@@QAEXG@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimWriteIdx(IntPtr __instance, ushort idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimVtx@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimVtx@ImDrawList@@QAEXABUImVec2@@0I@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PrimVtx(IntPtr __instance, IntPtr pos, IntPtr uv, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_ResetForNewFrame@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_ResetForNewFrame@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ResetForNewFrame(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_ClearFreeMemory@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_ClearFreeMemory@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearFreeMemory(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PopUnusedDrawCmd@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PopUnusedDrawCmd@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PopUnusedDrawCmd(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_TryMergeDrawCmds@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_TryMergeDrawCmds@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void TryMergeDrawCmds(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedClipRect@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedClipRect@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void OnChangedClipRect(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedTextureID@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedTextureID@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void OnChangedTextureID(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedVtxOffset@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedVtxOffset@ImDrawList@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void OnChangedVtxOffset(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_CalcCircleAutoSegmentCount@ImDrawList@@QBEHM@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_CalcCircleAutoSegmentCount@ImDrawList@@QBEHM@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern int CalcCircleAutoSegmentCount(IntPtr __instance, float radius);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PathArcToFastEx@ImDrawList@@QAEXABUImVec2@@MHHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PathArcToFastEx@ImDrawList@@QAEXABUImVec2@@MHHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathArcToFastEx(IntPtr __instance, IntPtr center, float radius, int a_min_sample, int a_max_sample, int a_step);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PathArcToN@ImDrawList@@QAEXABUImVec2@@MMMH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PathArcToN@ImDrawList@@QAEXABUImVec2@@MMMH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void PathArcToN(IntPtr __instance, IntPtr center, float radius, float a_min, float a_max, int num_segments);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawList@@QEAA@PEAUImDrawListSharedData@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawList@@QEAA@PEAUImDrawListSharedData@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr shared_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawList@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawList@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr cctor_1(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawList@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawList@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRect@ImDrawList@@QEAAXAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRect@ImDrawList@@QEAAXAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushClipRect(IntPtr __instance, IntPtr clip_rect_min, IntPtr clip_rect_max, bool intersect_with_current_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRectFullScreen@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRectFullScreen@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushClipRectFullScreen(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopClipRect@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopClipRect@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopClipRect(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTextureID@ImDrawList@@QEAAXPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTextureID@ImDrawList@@QEAAXPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushTextureID(IntPtr __instance, IntPtr texture_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTextureID@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTextureID@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopTextureID(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddLine@ImDrawList@@QEAAXAEBUImVec2@@0IM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddLine@ImDrawList@@QEAAXAEBUImVec2@@0IM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddLine(IntPtr __instance, IntPtr p1, IntPtr p2, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRect@ImDrawList@@QEAAXAEBUImVec2@@0IMHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRect@ImDrawList@@QEAAXAEBUImVec2@@0IMHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddRect(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col, float rounding, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRectFilled@ImDrawList@@QEAAXAEBUImVec2@@0IMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRectFilled@ImDrawList@@QEAAXAEBUImVec2@@0IMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddRectFilled(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRectFilledMultiColor@ImDrawList@@QEAAXAEBUImVec2@@0IIII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRectFilledMultiColor@ImDrawList@@QEAAXAEBUImVec2@@0IIII@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddRectFilledMultiColor(IntPtr __instance, IntPtr p_min, IntPtr p_max, uint col_upr_left, uint col_upr_right, uint col_bot_right, uint col_bot_left);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddQuad@ImDrawList@@QEAAXAEBUImVec2@@000IM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddQuad@ImDrawList@@QEAAXAEBUImVec2@@000IM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddQuad(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddQuadFilled@ImDrawList@@QEAAXAEBUImVec2@@000I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddQuadFilled@ImDrawList@@QEAAXAEBUImVec2@@000I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddQuadFilled(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddTriangle@ImDrawList@@QEAAXAEBUImVec2@@00IM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddTriangle@ImDrawList@@QEAAXAEBUImVec2@@00IM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddTriangle(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddTriangleFilled@ImDrawList@@QEAAXAEBUImVec2@@00I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddTriangleFilled@ImDrawList@@QEAAXAEBUImVec2@@00I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddTriangleFilled(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCircle@ImDrawList@@QEAAXAEBUImVec2@@MIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCircle@ImDrawList@@QEAAXAEBUImVec2@@MIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddCircle(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCircleFilled@ImDrawList@@QEAAXAEBUImVec2@@MIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCircleFilled@ImDrawList@@QEAAXAEBUImVec2@@MIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddCircleFilled(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddNgon@ImDrawList@@QEAAXAEBUImVec2@@MIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddNgon@ImDrawList@@QEAAXAEBUImVec2@@MIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddNgon(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddNgonFilled@ImDrawList@@QEAAXAEBUImVec2@@MIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddNgonFilled@ImDrawList@@QEAAXAEBUImVec2@@MIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddNgonFilled(IntPtr __instance, IntPtr center, float radius, uint col, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImDrawList@@QEAAXAEBUImVec2@@IPEBD1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImDrawList@@QEAAXAEBUImVec2@@IPEBD1@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddText(IntPtr __instance, IntPtr pos, uint col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImDrawList@@QEAAXPEBUImFont@@MAEBUImVec2@@IPEBD2MPEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImDrawList@@QEAAXPEBUImFont@@MAEBUImVec2@@IPEBD2MPEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddText(IntPtr __instance, IntPtr font, float font_size, IntPtr pos, uint col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width, IntPtr cpu_fine_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddPolyline@ImDrawList@@QEAAXPEBUImVec2@@HIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddPolyline@ImDrawList@@QEAAXPEBUImVec2@@HIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddPolyline(IntPtr __instance, IntPtr points, int num_points, uint col, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddConvexPolyFilled@ImDrawList@@QEAAXPEBUImVec2@@HI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddConvexPolyFilled@ImDrawList@@QEAAXPEBUImVec2@@HI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddConvexPolyFilled(IntPtr __instance, IntPtr points, int num_points, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddBezierCubic@ImDrawList@@QEAAXAEBUImVec2@@000IMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddBezierCubic@ImDrawList@@QEAAXAEBUImVec2@@000IMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddBezierCubic(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, uint col, float thickness, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddBezierQuadratic@ImDrawList@@QEAAXAEBUImVec2@@00IMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddBezierQuadratic@ImDrawList@@QEAAXAEBUImVec2@@00IMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddBezierQuadratic(IntPtr __instance, IntPtr p1, IntPtr p2, IntPtr p3, uint col, float thickness, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImage@ImDrawList@@QEAAXPEAXAEBUImVec2@@111I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImage@ImDrawList@@QEAAXPEAXAEBUImVec2@@111I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddImage(IntPtr __instance, IntPtr user_texture_id, IntPtr p_min, IntPtr p_max, IntPtr uv_min, IntPtr uv_max, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImageQuad@ImDrawList@@QEAAXPEAXAEBUImVec2@@1111111I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImageQuad@ImDrawList@@QEAAXPEAXAEBUImVec2@@1111111I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddImageQuad(IntPtr __instance, IntPtr user_texture_id, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, IntPtr uv1, IntPtr uv2, IntPtr uv3, IntPtr uv4, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddImageRounded@ImDrawList@@QEAAXPEAXAEBUImVec2@@111IMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddImageRounded@ImDrawList@@QEAAXPEAXAEBUImVec2@@111IMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddImageRounded(IntPtr __instance, IntPtr user_texture_id, IntPtr p_min, IntPtr p_max, IntPtr uv_min, IntPtr uv_max, uint col, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathClear@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathClear@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathClear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathLineTo@ImDrawList@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathLineTo@ImDrawList@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathLineTo(IntPtr __instance, IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathLineToMergeDuplicate@ImDrawList@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathLineToMergeDuplicate@ImDrawList@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathLineToMergeDuplicate(IntPtr __instance, IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathFillConvex@ImDrawList@@QEAAXI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathFillConvex@ImDrawList@@QEAAXI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathFillConvex(IntPtr __instance, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathStroke@ImDrawList@@QEAAXIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathStroke@ImDrawList@@QEAAXIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathStroke(IntPtr __instance, uint col, ImDrawFlags flags, float thickness);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathArcTo@ImDrawList@@QEAAXAEBUImVec2@@MMMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathArcTo@ImDrawList@@QEAAXAEBUImVec2@@MMMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathArcTo(IntPtr __instance, IntPtr center, float radius, float a_min, float a_max, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathArcToFast@ImDrawList@@QEAAXAEBUImVec2@@MHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathArcToFast@ImDrawList@@QEAAXAEBUImVec2@@MHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathArcToFast(IntPtr __instance, IntPtr center, float radius, int a_min_of_12, int a_max_of_12);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathBezierCubicCurveTo@ImDrawList@@QEAAXAEBUImVec2@@00H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathBezierCubicCurveTo@ImDrawList@@QEAAXAEBUImVec2@@00H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathBezierCubicCurveTo(IntPtr __instance, IntPtr p2, IntPtr p3, IntPtr p4, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathBezierQuadraticCurveTo@ImDrawList@@QEAAXAEBUImVec2@@0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathBezierQuadraticCurveTo@ImDrawList@@QEAAXAEBUImVec2@@0H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathBezierQuadraticCurveTo(IntPtr __instance, IntPtr p2, IntPtr p3, int num_segments);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PathRect@ImDrawList@@QEAAXAEBUImVec2@@0MH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PathRect@ImDrawList@@QEAAXAEBUImVec2@@0MH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathRect(IntPtr __instance, IntPtr rect_min, IntPtr rect_max, float rounding, ImDrawFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCallback@ImDrawList@@QEAAXP6AXPEBU1@PEBUImDrawCmd@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCallback@ImDrawList@@QEAAXP6AXPEBU1@PEBUImDrawCmd@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddCallback(IntPtr __instance, IntPtr callback, IntPtr callback_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddDrawCmd@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddDrawCmd@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddDrawCmd(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CloneOutput@ImDrawList@@QEBAPEAU1@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CloneOutput@ImDrawList@@QEBAPEAU1@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr CloneOutput(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsSplit@ImDrawList@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsSplit@ImDrawList@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ChannelsSplit(IntPtr __instance, int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsMerge@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsMerge@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ChannelsMerge(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ChannelsSetCurrent@ImDrawList@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ChannelsSetCurrent@ImDrawList@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ChannelsSetCurrent(IntPtr __instance, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimReserve@ImDrawList@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimReserve@ImDrawList@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimReserve(IntPtr __instance, int idx_count, int vtx_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimUnreserve@ImDrawList@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimUnreserve@ImDrawList@@QEAAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimUnreserve(IntPtr __instance, int idx_count, int vtx_count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimRect@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimRect@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimRect(IntPtr __instance, IntPtr a, IntPtr b, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimRectUV@ImDrawList@@QEAAXAEBUImVec2@@000I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimRectUV@ImDrawList@@QEAAXAEBUImVec2@@000I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimRectUV(IntPtr __instance, IntPtr a, IntPtr b, IntPtr uv_a, IntPtr uv_b, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimQuadUV@ImDrawList@@QEAAXAEBUImVec2@@0000000I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimQuadUV@ImDrawList@@QEAAXAEBUImVec2@@0000000I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimQuadUV(IntPtr __instance, IntPtr a, IntPtr b, IntPtr c, IntPtr d, IntPtr uv_a, IntPtr uv_b, IntPtr uv_c, IntPtr uv_d, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimWriteVtx@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimWriteVtx@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimWriteVtx(IntPtr __instance, IntPtr pos, IntPtr uv, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimWriteIdx@ImDrawList@@QEAAXG@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimWriteIdx@ImDrawList@@QEAAXG@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimWriteIdx(IntPtr __instance, ushort idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PrimVtx@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PrimVtx@ImDrawList@@QEAAXAEBUImVec2@@0I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PrimVtx(IntPtr __instance, IntPtr pos, IntPtr uv, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_ResetForNewFrame@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_ResetForNewFrame@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ResetForNewFrame(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_ClearFreeMemory@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_ClearFreeMemory@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearFreeMemory(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PopUnusedDrawCmd@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PopUnusedDrawCmd@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopUnusedDrawCmd(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_TryMergeDrawCmds@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_TryMergeDrawCmds@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TryMergeDrawCmds(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedClipRect@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedClipRect@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OnChangedClipRect(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedTextureID@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedTextureID@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OnChangedTextureID(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_OnChangedVtxOffset@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_OnChangedVtxOffset@ImDrawList@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OnChangedVtxOffset(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_CalcCircleAutoSegmentCount@ImDrawList@@QEBAHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_CalcCircleAutoSegmentCount@ImDrawList@@QEBAHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int CalcCircleAutoSegmentCount(IntPtr __instance, float radius);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PathArcToFastEx@ImDrawList@@QEAAXAEBUImVec2@@MHHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PathArcToFastEx@ImDrawList@@QEAAXAEBUImVec2@@MHHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathArcToFastEx(IntPtr __instance, IntPtr center, float radius, int a_min_sample, int a_max_sample, int a_step);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?_PathArcToN@ImDrawList@@QEAAXAEBUImVec2@@MMMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?_PathArcToN@ImDrawList@@QEAAXAEBUImVec2@@MMMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PathArcToN(IntPtr __instance, IntPtr center, float radius, float a_min, float a_max, int num_segments);
 
         }
@@ -12467,50 +12467,50 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImDrawData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImDrawData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddDrawList@ImDrawData@@QAEXPAUImDrawList@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddDrawList@ImDrawData@@QAEXPAUImDrawList@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddDrawList(IntPtr __instance, IntPtr draw_list);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DeIndexAllBuffers@ImDrawData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DeIndexAllBuffers@ImDrawData@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void DeIndexAllBuffers(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ScaleClipRects@ImDrawData@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ScaleClipRects@ImDrawData@@QAEXABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ScaleClipRects(IntPtr __instance, IntPtr fb_scale);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImDrawData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImDrawData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImDrawData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImDrawData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImDrawData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImDrawData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddDrawList@ImDrawData@@QEAAXPEAUImDrawList@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddDrawList@ImDrawData@@QEAAXPEAUImDrawList@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddDrawList(IntPtr __instance, IntPtr draw_list);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DeIndexAllBuffers@ImDrawData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DeIndexAllBuffers@ImDrawData@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DeIndexAllBuffers(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ScaleClipRects@ImDrawData@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ScaleClipRects@ImDrawData@@QEAAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ScaleClipRects(IntPtr __instance, IntPtr fb_scale);
 
         }
@@ -12751,27 +12751,27 @@ namespace DearImGui
             internal byte MergeMode;
             internal uint FontBuilderFlags;
             internal float RasterizerMultiply;
-            internal ushort EllipsisChar;
+            internal uint EllipsisChar;
             internal fixed sbyte Name[40];
             internal IntPtr DstFont;
         }
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontConfig@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontConfig@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontConfig@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontConfig@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontConfig@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontConfig@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontConfig@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontConfig@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -13050,11 +13050,11 @@ namespace DearImGui
         }
 
         /// <summary>NULL.<br/>THE ARRAY DATA NEEDS TO PERSIST AS LONG AS THE FONT IS ALIVE. Pointer to a user-provided list of Unicode range (2 value per range, values are inclusive, zero-terminated list).<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2789"/></summary>
-        public ushort* GlyphRanges
+        public uint* GlyphRanges
         {
             get
             {
-                return (ushort*)((__Internal*)__Instance)->GlyphRanges;
+                return (uint*)((__Internal*)__Instance)->GlyphRanges;
             }
         }
 
@@ -13129,7 +13129,7 @@ namespace DearImGui
         }
 
         /// <summary>-1.<br/>Explicitly specify unicode codepoint of ellipsis character. When fonts are being merged first specified ellipsis will be used.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2795"/></summary>
-        public ushort EllipsisChar
+        public uint EllipsisChar
         {
             get
             {
@@ -13201,14 +13201,14 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyph@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyph@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyph@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyph@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -13477,70 +13477,70 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyphRangesBuilder@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyphRangesBuilder@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyphRangesBuilder@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyphRangesBuilder@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFontGlyphRangesBuilder@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFontGlyphRangesBuilder@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImFontGlyphRangesBuilder@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImFontGlyphRangesBuilder@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBit@ImFontGlyphRangesBuilder@@QBE_NI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBit@ImFontGlyphRangesBuilder@@QBE_NI@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetBit(IntPtr __instance, UIntPtr n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetBit@ImFontGlyphRangesBuilder@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetBit@ImFontGlyphRangesBuilder@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void SetBit(IntPtr __instance, UIntPtr n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddChar@ImFontGlyphRangesBuilder@@QAEXG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void AddChar(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddChar@ImFontGlyphRangesBuilder@@QAEXI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void AddChar(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImFontGlyphRangesBuilder@@QAEXPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImFontGlyphRangesBuilder@@QAEXPBD0@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void AddText(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRanges@ImFontGlyphRangesBuilder@@QAEXPBG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void AddRanges(IntPtr __instance, ushort* ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRanges@ImFontGlyphRangesBuilder@@QAEXPBI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void AddRanges(IntPtr __instance, uint* ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildRanges@ImFontGlyphRangesBuilder@@QAEXPAU?$ImVector@G@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildRanges@ImFontGlyphRangesBuilder@@QAEXPAU?$ImVector@I@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void BuildRanges(IntPtr __instance, IntPtr out_ranges);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyphRangesBuilder@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyphRangesBuilder@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontGlyphRangesBuilder@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontGlyphRangesBuilder@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFontGlyphRangesBuilder@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFontGlyphRangesBuilder@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImFontGlyphRangesBuilder@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImFontGlyphRangesBuilder@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBit@ImFontGlyphRangesBuilder@@QEBA_N_K@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBit@ImFontGlyphRangesBuilder@@QEBA_N_K@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetBit(IntPtr __instance, UIntPtr n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetBit@ImFontGlyphRangesBuilder@@QEAAX_K@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetBit@ImFontGlyphRangesBuilder@@QEAAX_K@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetBit(IntPtr __instance, UIntPtr n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddChar@ImFontGlyphRangesBuilder@@QEAAXG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void AddChar(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddChar@ImFontGlyphRangesBuilder@@QEAAXI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void AddChar(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddText@ImFontGlyphRangesBuilder@@QEAAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddText@ImFontGlyphRangesBuilder@@QEAAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AddText(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRanges@ImFontGlyphRangesBuilder@@QEAAXPEBG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void AddRanges(IntPtr __instance, ushort* ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRanges@ImFontGlyphRangesBuilder@@QEAAXPEBI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void AddRanges(IntPtr __instance, uint* ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildRanges@ImFontGlyphRangesBuilder@@QEAAXPEAU?$ImVector@G@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildRanges@ImFontGlyphRangesBuilder@@QEAAXPEAU?$ImVector@I@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BuildRanges(IntPtr __instance, IntPtr out_ranges);
 
         }
@@ -13720,7 +13720,7 @@ namespace DearImGui
 
         /// <summary>Add character.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2826"/></summary>
         // DEBUG: inline void     AddChar(ImWchar c)      { SetBit(c); }
-        public void AddChar(ushort c)
+        public void AddChar(uint c)
         {
             if (Environment.Is64BitProcess)
             {
@@ -13748,9 +13748,9 @@ namespace DearImGui
 
         /// <summary>Add ranges, e.g. builder.AddRanges(ImFontAtlas::GetGlyphRangesDefault()) to force add all of ASCII/Latin+Ext.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2828"/></summary>
         // DEBUG: void  AddRanges(const ImWchar* ranges)
-        public void AddRanges(ref ushort ranges)
+        public void AddRanges(ref uint ranges)
         {
-            fixed (ushort* __ranges0 = &ranges)
+            fixed (uint* __ranges0 = &ranges)
             {
                 var __arg0 = __ranges0;
                 if (Environment.Is64BitProcess)
@@ -13766,7 +13766,7 @@ namespace DearImGui
 
         /// <summary>Output new ranges.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2829"/></summary>
         // DEBUG: void  BuildRanges(ImVector<ImWchar>* out_ranges)
-        public void BuildRanges(ImVector<ushort> out_ranges)
+        public void BuildRanges(ImVector<uint> out_ranges)
         {
             var __arg0 = new IntPtr(Unsafe.AsPointer(ref out_ranges))
             /* DEBUG: TypeMapImVector.CSharpMarshalToNative: Function: True, ReturnVarName: False */
@@ -13822,13 +13822,13 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlasCustomRect@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlasCustomRect@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlasCustomRect@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlasCustomRect@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPacked@ImFontAtlasCustomRect@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPacked@ImFontAtlasCustomRect@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPacked(IntPtr __instance);
 
@@ -13836,13 +13836,13 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlasCustomRect@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlasCustomRect@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlasCustomRect@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlasCustomRect@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPacked@ImFontAtlasCustomRect@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPacked@ImFontAtlasCustomRect@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPacked(IntPtr __instance);
 
@@ -14222,201 +14222,201 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlas@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlas@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlas@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlas@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFontAtlas@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFontAtlas@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFont@ImFontAtlas@@QAEPAUImFont@@PBUImFontConfig@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFont@ImFontAtlas@@QAEPAUImFont@@PBUImFontConfig@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr AddFont(IntPtr __instance, IntPtr font_cfg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontDefault@ImFontAtlas@@QAEPAUImFont@@PBUImFontConfig@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontDefault@ImFontAtlas@@QAEPAUImFont@@PBUImFontConfig@@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr AddFontDefault(IntPtr __instance, IntPtr font_cfg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromFileTTF@ImFontAtlas@@QAEPAUImFont@@PBDMPBUImFontConfig@@PBG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr AddFontFromFileTTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromFileTTF@ImFontAtlas@@QAEPAUImFont@@PBDMPBUImFontConfig@@PBI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr AddFontFromFileTTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryTTF@ImFontAtlas@@QAEPAUImFont@@PAXHMPBUImFontConfig@@PBG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr AddFontFromMemoryTTF(IntPtr __instance, IntPtr font_data, int font_size, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryTTF@ImFontAtlas@@QAEPAUImFont@@PAXHMPBUImFontConfig@@PBI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr AddFontFromMemoryTTF(IntPtr __instance, IntPtr font_data, int font_size, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryCompressedTTF@ImFontAtlas@@QAEPAUImFont@@PBXHMPBUImFontConfig@@PBG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr AddFontFromMemoryCompressedTTF(IntPtr __instance, IntPtr compressed_font_data, int compressed_font_size, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryCompressedTTF@ImFontAtlas@@QAEPAUImFont@@PBXHMPBUImFontConfig@@PBI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr AddFontFromMemoryCompressedTTF(IntPtr __instance, IntPtr compressed_font_data, int compressed_font_size, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryCompressedBase85TTF@ImFontAtlas@@QAEPAUImFont@@PBDMPBUImFontConfig@@PBG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr AddFontFromMemoryCompressedBase85TTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string compressed_font_data_base85, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryCompressedBase85TTF@ImFontAtlas@@QAEPAUImFont@@PBDMPBUImFontConfig@@PBI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr AddFontFromMemoryCompressedBase85TTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string compressed_font_data_base85, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearInputData@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearInputData@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearInputData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearTexData@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearTexData@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearTexData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearFonts@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearFonts@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearFonts(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImFontAtlas@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Build@ImFontAtlas@@QAE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Build@ImFontAtlas@@QAE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Build(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTexDataAsAlpha8@ImFontAtlas@@QAEXPAPAEPAH11@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTexDataAsAlpha8@ImFontAtlas@@QAEXPAPAEPAH11@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void GetTexDataAsAlpha8(IntPtr __instance, byte** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTexDataAsRGBA32@ImFontAtlas@@QAEXPAPAEPAH11@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTexDataAsRGBA32@ImFontAtlas@@QAEXPAPAEPAH11@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void GetTexDataAsRGBA32(IntPtr __instance, byte** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCustomRectRegular@ImFontAtlas@@QAEHHH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCustomRectRegular@ImFontAtlas@@QAEHHH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern int AddCustomRectRegular(IntPtr __instance, int width, int height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCustomRectFontGlyph@ImFontAtlas@@QAEHPAUImFont@@GHHMABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern int AddCustomRectFontGlyph(IntPtr __instance, IntPtr font, ushort id, int width, int height, float advance_x, IntPtr offset);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCustomRectFontGlyph@ImFontAtlas@@QAEHPAUImFont@@IHHMABUImVec2@@@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern int AddCustomRectFontGlyph(IntPtr __instance, IntPtr font, uint id, int width, int height, float advance_x, IntPtr offset);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCustomRectByIndex@ImFontAtlas@@QAEPAUImFontAtlasCustomRect@@H@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCustomRectByIndex@ImFontAtlas@@QAEPAUImFontAtlasCustomRect@@H@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr GetCustomRectByIndex(IntPtr __instance, int index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcCustomRectUV@ImFontAtlas@@QBEXPBUImFontAtlasCustomRect@@PAUImVec2@@1@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcCustomRectUV@ImFontAtlas@@QBEXPBUImFontAtlasCustomRect@@PAUImVec2@@1@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void CalcCustomRectUV(IntPtr __instance, IntPtr rect, IntPtr out_uv_min, IntPtr out_uv_max);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseCursorTexData@ImFontAtlas@@QAE_NHPAUImVec2@@0QAU2@1@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseCursorTexData@ImFontAtlas@@QAE_NHPAUImVec2@@0QAU2@1@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetMouseCursorTexData(IntPtr __instance, ImGuiMouseCursor cursor, IntPtr out_offset, IntPtr out_size, Vector2* out_uv_border, Vector2* out_uv_fill);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsBuilt@ImFontAtlas@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsBuilt@ImFontAtlas@@QBE_NXZ", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsBuilt(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesDefault@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesDefault(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesDefault@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesDefault(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesGreek@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesGreek(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesGreek@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesGreek(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesKorean@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesKorean(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesKorean@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesKorean(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesJapanese@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesJapanese(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesJapanese@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesJapanese(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesChineseFull@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesChineseFull(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesChineseFull@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesChineseFull(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesChineseSimplifiedCommon@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesChineseSimplifiedCommon(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesChineseSimplifiedCommon@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesChineseSimplifiedCommon(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesCyrillic@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesCyrillic(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesCyrillic@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesCyrillic(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesThai@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesThai(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesThai@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesThai(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesVietnamese@ImFontAtlas@@QAEPBGXZ", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern ushort* GetGlyphRangesVietnamese(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesVietnamese@ImFontAtlas@@QAEPBIXZ", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern uint* GetGlyphRangesVietnamese(IntPtr __instance);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlas@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlas@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFontAtlas@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFontAtlas@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFontAtlas@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFontAtlas@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFont@ImFontAtlas@@QEAAPEAUImFont@@PEBUImFontConfig@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFont@ImFontAtlas@@QEAAPEAUImFont@@PEBUImFontConfig@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr AddFont(IntPtr __instance, IntPtr font_cfg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontDefault@ImFontAtlas@@QEAAPEAUImFont@@PEBUImFontConfig@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontDefault@ImFontAtlas@@QEAAPEAUImFont@@PEBUImFontConfig@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr AddFontDefault(IntPtr __instance, IntPtr font_cfg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromFileTTF@ImFontAtlas@@QEAAPEAUImFont@@PEBDMPEBUImFontConfig@@PEBG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr AddFontFromFileTTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromFileTTF@ImFontAtlas@@QEAAPEAUImFont@@PEBDMPEBUImFontConfig@@PEBI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr AddFontFromFileTTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryTTF@ImFontAtlas@@QEAAPEAUImFont@@PEAXHMPEBUImFontConfig@@PEBG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr AddFontFromMemoryTTF(IntPtr __instance, IntPtr font_data, int font_size, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryTTF@ImFontAtlas@@QEAAPEAUImFont@@PEAXHMPEBUImFontConfig@@PEBI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr AddFontFromMemoryTTF(IntPtr __instance, IntPtr font_data, int font_size, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryCompressedTTF@ImFontAtlas@@QEAAPEAUImFont@@PEBXHMPEBUImFontConfig@@PEBG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr AddFontFromMemoryCompressedTTF(IntPtr __instance, IntPtr compressed_font_data, int compressed_font_size, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryCompressedTTF@ImFontAtlas@@QEAAPEAUImFont@@PEBXHMPEBUImFontConfig@@PEBI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr AddFontFromMemoryCompressedTTF(IntPtr __instance, IntPtr compressed_font_data, int compressed_font_size, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddFontFromMemoryCompressedBase85TTF@ImFontAtlas@@QEAAPEAUImFont@@PEBDMPEBUImFontConfig@@PEBG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr AddFontFromMemoryCompressedBase85TTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string compressed_font_data_base85, float size_pixels, IntPtr font_cfg, ushort* glyph_ranges);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddFontFromMemoryCompressedBase85TTF@ImFontAtlas@@QEAAPEAUImFont@@PEBDMPEBUImFontConfig@@PEBI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr AddFontFromMemoryCompressedBase85TTF(IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string compressed_font_data_base85, float size_pixels, IntPtr font_cfg, uint* glyph_ranges);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearInputData@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearInputData@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearInputData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearTexData@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearTexData@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearTexData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearFonts@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearFonts@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearFonts(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Clear@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Clear@ImFontAtlas@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Clear(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Build@ImFontAtlas@@QEAA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Build@ImFontAtlas@@QEAA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Build(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTexDataAsAlpha8@ImFontAtlas@@QEAAXPEAPEAEPEAH11@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTexDataAsAlpha8@ImFontAtlas@@QEAAXPEAPEAEPEAH11@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetTexDataAsAlpha8(IntPtr __instance, byte** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTexDataAsRGBA32@ImFontAtlas@@QEAAXPEAPEAEPEAH11@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTexDataAsRGBA32@ImFontAtlas@@QEAAXPEAPEAEPEAH11@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetTexDataAsRGBA32(IntPtr __instance, byte** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCustomRectRegular@ImFontAtlas@@QEAAHHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCustomRectRegular@ImFontAtlas@@QEAAHHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int AddCustomRectRegular(IntPtr __instance, int width, int height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddCustomRectFontGlyph@ImFontAtlas@@QEAAHPEAUImFont@@GHHMAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern int AddCustomRectFontGlyph(IntPtr __instance, IntPtr font, ushort id, int width, int height, float advance_x, IntPtr offset);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddCustomRectFontGlyph@ImFontAtlas@@QEAAHPEAUImFont@@IHHMAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern int AddCustomRectFontGlyph(IntPtr __instance, IntPtr font, uint id, int width, int height, float advance_x, IntPtr offset);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCustomRectByIndex@ImFontAtlas@@QEAAPEAUImFontAtlasCustomRect@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCustomRectByIndex@ImFontAtlas@@QEAAPEAUImFontAtlasCustomRect@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetCustomRectByIndex(IntPtr __instance, int index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcCustomRectUV@ImFontAtlas@@QEBAXPEBUImFontAtlasCustomRect@@PEAUImVec2@@1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcCustomRectUV@ImFontAtlas@@QEBAXPEBUImFontAtlasCustomRect@@PEAUImVec2@@1@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CalcCustomRectUV(IntPtr __instance, IntPtr rect, IntPtr out_uv_min, IntPtr out_uv_max);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseCursorTexData@ImFontAtlas@@QEAA_NHPEAUImVec2@@0QEAU2@1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseCursorTexData@ImFontAtlas@@QEAA_NHPEAUImVec2@@0QEAU2@1@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool GetMouseCursorTexData(IntPtr __instance, ImGuiMouseCursor cursor, IntPtr out_offset, IntPtr out_size, Vector2* out_uv_border, Vector2* out_uv_fill);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsBuilt@ImFontAtlas@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsBuilt@ImFontAtlas@@QEBA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsBuilt(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesDefault@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesDefault(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesDefault@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesDefault(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesGreek@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesGreek(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesGreek@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesGreek(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesKorean@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesKorean(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesKorean@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesKorean(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesJapanese@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesJapanese(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesJapanese@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesJapanese(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesChineseFull@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesChineseFull(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesChineseFull@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesChineseFull(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesChineseSimplifiedCommon@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesChineseSimplifiedCommon(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesChineseSimplifiedCommon@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesChineseSimplifiedCommon(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesCyrillic@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesCyrillic(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesCyrillic@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesCyrillic(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesThai@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesThai(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesThai@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesThai(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetGlyphRangesVietnamese@ImFontAtlas@@QEAAPEBGXZ", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern ushort* GetGlyphRangesVietnamese(IntPtr __instance);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetGlyphRangesVietnamese@ImFontAtlas@@QEAAPEBIXZ", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern uint* GetGlyphRangesVietnamese(IntPtr __instance);
 
         }
 
@@ -14581,10 +14581,10 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2877"/></summary>
         // DEBUG: ImFont*           AddFontFromFileTTF(const char* filename, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
-        public ImFont AddFontFromFileTTF(string filename, float size_pixels, ImFontConfig font_cfg, ref ushort glyph_ranges)
+        public ImFont AddFontFromFileTTF(string filename, float size_pixels, ImFontConfig font_cfg, ref uint glyph_ranges)
         {
             var __arg2 = font_cfg is null ? IntPtr.Zero : font_cfg.__Instance;
-            fixed (ushort* __glyph_ranges3 = &glyph_ranges)
+            fixed (uint* __glyph_ranges3 = &glyph_ranges)
             {
                 var __arg3 = __glyph_ranges3;
                 var ___ret = Environment.Is64BitProcess ? __Internal64.AddFontFromFileTTF(__Instance, filename, size_pixels, __arg2, __arg3) : __Internal32.AddFontFromFileTTF(__Instance, filename, size_pixels, __arg2, __arg3);
@@ -14595,10 +14595,10 @@ namespace DearImGui
 
         /// <summary>Note: Transfer ownership of 'ttf_data' to ImFontAtlas! Will be deleted after destruction of the atlas. Set font_cfg-&gt;FontDataOwnedByAtlas=false to keep ownership of your data and it won't be freed.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2878"/></summary>
         // DEBUG: ImFont*           AddFontFromMemoryTTF(void* font_data, int font_size, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
-        public ImFont AddFontFromMemoryTTF(IntPtr font_data, int font_size, float size_pixels, ImFontConfig font_cfg, ref ushort glyph_ranges)
+        public ImFont AddFontFromMemoryTTF(IntPtr font_data, int font_size, float size_pixels, ImFontConfig font_cfg, ref uint glyph_ranges)
         {
             var __arg3 = font_cfg is null ? IntPtr.Zero : font_cfg.__Instance;
-            fixed (ushort* __glyph_ranges4 = &glyph_ranges)
+            fixed (uint* __glyph_ranges4 = &glyph_ranges)
             {
                 var __arg4 = __glyph_ranges4;
                 var ___ret = Environment.Is64BitProcess ? __Internal64.AddFontFromMemoryTTF(__Instance, font_data, font_size, size_pixels, __arg3, __arg4) : __Internal32.AddFontFromMemoryTTF(__Instance, font_data, font_size, size_pixels, __arg3, __arg4);
@@ -14609,10 +14609,10 @@ namespace DearImGui
 
         /// <summary>'compressed_font_data' still owned by caller. Compress with binary_to_compressed_c.cpp.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2879"/></summary>
         // DEBUG: ImFont*           AddFontFromMemoryCompressedTTF(const void* compressed_font_data, int compressed_font_size, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
-        public ImFont AddFontFromMemoryCompressedTTF(IntPtr compressed_font_data, int compressed_font_size, float size_pixels, ImFontConfig font_cfg, ref ushort glyph_ranges)
+        public ImFont AddFontFromMemoryCompressedTTF(IntPtr compressed_font_data, int compressed_font_size, float size_pixels, ImFontConfig font_cfg, ref uint glyph_ranges)
         {
             var __arg3 = font_cfg is null ? IntPtr.Zero : font_cfg.__Instance;
-            fixed (ushort* __glyph_ranges4 = &glyph_ranges)
+            fixed (uint* __glyph_ranges4 = &glyph_ranges)
             {
                 var __arg4 = __glyph_ranges4;
                 var ___ret = Environment.Is64BitProcess ? __Internal64.AddFontFromMemoryCompressedTTF(__Instance, compressed_font_data, compressed_font_size, size_pixels, __arg3, __arg4) : __Internal32.AddFontFromMemoryCompressedTTF(__Instance, compressed_font_data, compressed_font_size, size_pixels, __arg3, __arg4);
@@ -14623,10 +14623,10 @@ namespace DearImGui
 
         /// <summary>'compressed_font_data_base85' still owned by caller. Compress with binary_to_compressed_c.cpp with -base85 parameter.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2880"/></summary>
         // DEBUG: ImFont*           AddFontFromMemoryCompressedBase85TTF(const char* compressed_font_data_base85, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
-        public ImFont AddFontFromMemoryCompressedBase85TTF(string compressed_font_data_base85, float size_pixels, ImFontConfig font_cfg, ref ushort glyph_ranges)
+        public ImFont AddFontFromMemoryCompressedBase85TTF(string compressed_font_data_base85, float size_pixels, ImFontConfig font_cfg, ref uint glyph_ranges)
         {
             var __arg2 = font_cfg is null ? IntPtr.Zero : font_cfg.__Instance;
-            fixed (ushort* __glyph_ranges3 = &glyph_ranges)
+            fixed (uint* __glyph_ranges3 = &glyph_ranges)
             {
                 var __arg3 = __glyph_ranges3;
                 var ___ret = Environment.Is64BitProcess ? __Internal64.AddFontFromMemoryCompressedBase85TTF(__Instance, compressed_font_data_base85, size_pixels, __arg2, __arg3) : __Internal32.AddFontFromMemoryCompressedBase85TTF(__Instance, compressed_font_data_base85, size_pixels, __arg2, __arg3);
@@ -14761,7 +14761,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2927"/></summary>
         // DEBUG: int               AddCustomRectFontGlyph(ImFont* font, ImWchar id, int width, int height, float advance_x, const ImVec2& offset = ImVec2(0, 0))
-        public int AddCustomRectFontGlyph(ImFont font, ushort id, int width, int height, float advance_x, Vector2 offset)
+        public int AddCustomRectFontGlyph(ImFont font, uint id, int width, int height, float advance_x, Vector2 offset)
         {
             var __arg0 = font is null ? IntPtr.Zero : font.__Instance;
             var __arg5 = new IntPtr(Unsafe.AsPointer(ref offset))
@@ -14862,7 +14862,7 @@ namespace DearImGui
         // DEBUG: ImFont*           AddFontFromFileTTF(const char* filename, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
         public ImFont AddFontFromFileTTF(string filename, float size_pixels, ImFontConfig font_cfg = default)
         {
-            ushort param0 = 0;
+            uint param0 = 0;
             return AddFontFromFileTTF(filename, size_pixels, font_cfg, ref param0);
         }
 
@@ -14870,7 +14870,7 @@ namespace DearImGui
         // DEBUG: ImFont*           AddFontFromMemoryTTF(void* font_data, int font_size, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
         public ImFont AddFontFromMemoryTTF(IntPtr font_data, int font_size, float size_pixels, ImFontConfig font_cfg = default)
         {
-            ushort param0 = 0;
+            uint param0 = 0;
             return AddFontFromMemoryTTF(font_data, font_size, size_pixels, font_cfg, ref param0);
         }
 
@@ -14878,7 +14878,7 @@ namespace DearImGui
         // DEBUG: ImFont*           AddFontFromMemoryCompressedTTF(const void* compressed_font_data, int compressed_font_size, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
         public ImFont AddFontFromMemoryCompressedTTF(IntPtr compressed_font_data, int compressed_font_size, float size_pixels, ImFontConfig font_cfg = default)
         {
-            ushort param0 = 0;
+            uint param0 = 0;
             return AddFontFromMemoryCompressedTTF(compressed_font_data, compressed_font_size, size_pixels, font_cfg, ref param0);
         }
 
@@ -14886,7 +14886,7 @@ namespace DearImGui
         // DEBUG: ImFont*           AddFontFromMemoryCompressedBase85TTF(const char* compressed_font_data_base85, float size_pixels, const ImFontConfig* font_cfg = NULL, const ImWchar* glyph_ranges = NULL)
         public ImFont AddFontFromMemoryCompressedBase85TTF(string compressed_font_data_base85, float size_pixels, ImFontConfig font_cfg = default)
         {
-            ushort param0 = 0;
+            uint param0 = 0;
             return AddFontFromMemoryCompressedBase85TTF(compressed_font_data_base85, size_pixels, font_cfg, ref param0);
         }
 
@@ -14908,7 +14908,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2927"/></summary>
         // DEBUG: int               AddCustomRectFontGlyph(ImFont* font, ImWchar id, int width, int height, float advance_x, const ImVec2& offset = ImVec2(0, 0))
-        public int AddCustomRectFontGlyph(ImFont font, ushort id, int width, int height, float advance_x)
+        public int AddCustomRectFontGlyph(ImFont font, uint id, int width, int height, float advance_x)
         {
             return AddCustomRectFontGlyph(font, id, width, height, advance_x, new Vector2(0, 0));
         }
@@ -15207,7 +15207,7 @@ namespace DearImGui
         }
 
         /// <summary>Basic Latin, Extended Latin.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2905"/></summary>
-        public ushort* GlyphRangesDefault
+        public uint* GlyphRangesDefault
         {
             get
             {
@@ -15217,7 +15217,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Greek and Coptic.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2906"/></summary>
-        public ushort* GlyphRangesGreek
+        public uint* GlyphRangesGreek
         {
             get
             {
@@ -15227,7 +15227,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Korean characters.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2907"/></summary>
-        public ushort* GlyphRangesKorean
+        public uint* GlyphRangesKorean
         {
             get
             {
@@ -15237,7 +15237,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Hiragana, Katakana, Half-Width, Selection of 2999 Ideographs.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2908"/></summary>
-        public ushort* GlyphRangesJapanese
+        public uint* GlyphRangesJapanese
         {
             get
             {
@@ -15247,7 +15247,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Half-Width + Japanese Hiragana/Katakana + full set of about 21000 CJK Unified Ideographs.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2909"/></summary>
-        public ushort* GlyphRangesChineseFull
+        public uint* GlyphRangesChineseFull
         {
             get
             {
@@ -15257,7 +15257,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Half-Width + Japanese Hiragana/Katakana + set of 2500 CJK Unified Ideographs for common simplified Chinese.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2910"/></summary>
-        public ushort* GlyphRangesChineseSimplifiedCommon
+        public uint* GlyphRangesChineseSimplifiedCommon
         {
             get
             {
@@ -15267,7 +15267,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + about 400 Cyrillic characters.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2911"/></summary>
-        public ushort* GlyphRangesCyrillic
+        public uint* GlyphRangesCyrillic
         {
             get
             {
@@ -15277,7 +15277,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Thai characters.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2912"/></summary>
-        public ushort* GlyphRangesThai
+        public uint* GlyphRangesThai
         {
             get
             {
@@ -15287,7 +15287,7 @@ namespace DearImGui
         }
 
         /// <summary>Default + Vietnamese characters.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2913"/></summary>
-        public ushort* GlyphRangesVietnamese
+        public uint* GlyphRangesVietnamese
         {
             get
             {
@@ -15364,8 +15364,8 @@ namespace DearImGui
             internal IntPtr ContainerAtlas;
             internal IntPtr ConfigData;
             internal short ConfigDataCount;
-            internal ushort FallbackChar;
-            internal ushort EllipsisChar;
+            internal uint FallbackChar;
+            internal uint EllipsisChar;
             internal short EllipsisCharCount;
             internal float EllipsisWidth;
             internal float EllipsisCharStep;
@@ -15374,60 +15374,60 @@ namespace DearImGui
             internal float Ascent;
             internal float Descent;
             internal int MetricsTotalSurface;
-            internal fixed byte Used4kPagesMap[2];
+            internal fixed byte Used4kPagesMap[34];
         }
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFont@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFont@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFont@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFont@@QAE@ABU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFont@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFont@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?FindGlyph@ImFont@@QBEPBUImFontGlyph@@G@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr FindGlyph(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?FindGlyph@ImFont@@QBEPBUImFontGlyph@@I@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr FindGlyph(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?FindGlyphNoFallback@ImFont@@QBEPBUImFontGlyph@@G@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern IntPtr FindGlyphNoFallback(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?FindGlyphNoFallback@ImFont@@QBEPBUImFontGlyph@@I@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern IntPtr FindGlyphNoFallback(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCharAdvance@ImFont@@QBEMG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern float GetCharAdvance(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCharAdvance@ImFont@@QBEMI@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern float GetCharAdvance(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcTextSizeA@ImFont@@QBE?AUImVec2@@MMMPBD0PAPBD@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcTextSizeA@ImFont@@QBE?AUImVec2@@MMMPBD0PAPBD@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void CalcTextSizeA(IntPtr __instance, IntPtr @return, float size, float max_width, float wrap_width, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, sbyte** remaining);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcWordWrapPositionA@ImFont@@QBEPBDMPBD0M@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcWordWrapPositionA@ImFont@@QBEPBDMPBD0M@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr CalcWordWrapPositionA(IntPtr __instance, float scale, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RenderChar@ImFont@@QBEXPAUImDrawList@@MABUImVec2@@IG@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void RenderChar(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RenderChar@ImFont@@QBEXPAUImDrawList@@MABUImVec2@@II@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void RenderChar(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RenderText@ImFont@@QBEXPAUImDrawList@@MABUImVec2@@IABUImVec4@@PBD3M_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RenderText@ImFont@@QBEXPAUImDrawList@@MABUImVec2@@IABUImVec4@@PBD3M_N@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void RenderText(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, IntPtr clip_rect, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width, bool cpu_fine_clip);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildLookupTable@ImFont@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildLookupTable@ImFont@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void BuildLookupTable(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearOutputData@ImFont@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearOutputData@ImFont@@QAEXXZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void ClearOutputData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GrowIndex@ImFont@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GrowIndex@ImFont@@QAEXH@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void GrowIndex(IntPtr __instance, int new_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddGlyph@ImFont@@QAEXPBUImFontConfig@@GMMMMMMMMM@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void AddGlyph(IntPtr __instance, IntPtr src_cfg, ushort c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddGlyph@ImFont@@QAEXPBUImFontConfig@@IMMMMMMMMM@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void AddGlyph(IntPtr __instance, IntPtr src_cfg, uint c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRemapChar@ImFont@@QAEXGG_N@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void AddRemapChar(IntPtr __instance, ushort dst, ushort src, bool overwrite_dst);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRemapChar@ImFont@@QAEXII_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void AddRemapChar(IntPtr __instance, uint dst, uint src, bool overwrite_dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetGlyphVisible@ImFont@@QAEXG_N@Z", CallingConvention = CallingConvention.ThisCall)]
-            internal static extern void SetGlyphVisible(IntPtr __instance, ushort c, bool visible);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetGlyphVisible@ImFont@@QAEXI_N@Z", CallingConvention = CallingConvention.ThisCall)]
+            internal static extern void SetGlyphVisible(IntPtr __instance, uint c, bool visible);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsGlyphRangeUnused@ImFont@@QAE_NII@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsGlyphRangeUnused@ImFont@@QAE_NII@Z", CallingConvention = CallingConvention.ThisCall)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsGlyphRangeUnused(IntPtr __instance, uint c_begin, uint c_last);
 
@@ -15435,55 +15435,55 @@ namespace DearImGui
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFont@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFont@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImFont@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImFont@@QEAA@AEBU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr cctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??1ImFont@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??1ImFont@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void dtor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?FindGlyph@ImFont@@QEBAPEBUImFontGlyph@@G@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr FindGlyph(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?FindGlyph@ImFont@@QEBAPEBUImFontGlyph@@I@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr FindGlyph(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?FindGlyphNoFallback@ImFont@@QEBAPEBUImFontGlyph@@G@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr FindGlyphNoFallback(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?FindGlyphNoFallback@ImFont@@QEBAPEBUImFontGlyph@@I@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern IntPtr FindGlyphNoFallback(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCharAdvance@ImFont@@QEBAMG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern float GetCharAdvance(IntPtr __instance, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCharAdvance@ImFont@@QEBAMI@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern float GetCharAdvance(IntPtr __instance, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcTextSizeA@ImFont@@QEBA?AUImVec2@@MMMPEBD0PEAPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcTextSizeA@ImFont@@QEBA?AUImVec2@@MMMPEBD0PEAPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CalcTextSizeA(IntPtr __instance, IntPtr @return, float size, float max_width, float wrap_width, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, sbyte** remaining);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcWordWrapPositionA@ImFont@@QEBAPEBDMPEBD0M@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcWordWrapPositionA@ImFont@@QEBAPEBDMPEBD0M@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr CalcWordWrapPositionA(IntPtr __instance, float scale, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RenderChar@ImFont@@QEBAXPEAUImDrawList@@MAEBUImVec2@@IG@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void RenderChar(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, ushort c);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RenderChar@ImFont@@QEBAXPEAUImDrawList@@MAEBUImVec2@@II@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void RenderChar(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, uint c);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RenderText@ImFont@@QEBAXPEAUImDrawList@@MAEBUImVec2@@IAEBUImVec4@@PEBD3M_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RenderText@ImFont@@QEBAXPEAUImDrawList@@MAEBUImVec2@@IAEBUImVec4@@PEBD3M_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void RenderText(IntPtr __instance, IntPtr draw_list, float size, IntPtr pos, uint col, IntPtr clip_rect, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, float wrap_width, bool cpu_fine_clip);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BuildLookupTable@ImFont@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BuildLookupTable@ImFont@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BuildLookupTable(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ClearOutputData@ImFont@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ClearOutputData@ImFont@@QEAAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ClearOutputData(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GrowIndex@ImFont@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GrowIndex@ImFont@@QEAAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GrowIndex(IntPtr __instance, int new_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddGlyph@ImFont@@QEAAXPEBUImFontConfig@@GMMMMMMMMM@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void AddGlyph(IntPtr __instance, IntPtr src_cfg, ushort c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddGlyph@ImFont@@QEAAXPEBUImFontConfig@@IMMMMMMMMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void AddGlyph(IntPtr __instance, IntPtr src_cfg, uint c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AddRemapChar@ImFont@@QEAAXGG_N@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void AddRemapChar(IntPtr __instance, ushort dst, ushort src, bool overwrite_dst);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AddRemapChar@ImFont@@QEAAXII_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void AddRemapChar(IntPtr __instance, uint dst, uint src, bool overwrite_dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetGlyphVisible@ImFont@@QEAAXG_N@Z", CallingConvention = CallingConvention.Cdecl)]
-            internal static extern void SetGlyphVisible(IntPtr __instance, ushort c, bool visible);
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetGlyphVisible@ImFont@@QEAAXI_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            internal static extern void SetGlyphVisible(IntPtr __instance, uint c, bool visible);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsGlyphRangeUnused@ImFont@@QEAA_NII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsGlyphRangeUnused@ImFont@@QEAA_NII@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsGlyphRangeUnused(IntPtr __instance, uint c_begin, uint c_last);
 
@@ -15630,7 +15630,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3005"/></summary>
         // DEBUG: const ImFontGlyph*FindGlyph(ImWchar c) const
-        public ImFontGlyph FindGlyph(ushort c)
+        public ImFontGlyph FindGlyph(uint c)
         {
             var ___ret = Environment.Is64BitProcess ? __Internal64.FindGlyph(__Instance, c) : __Internal32.FindGlyph(__Instance, c);
             var __result0 = ImFontGlyph.__GetOrCreateInstance(___ret, false);
@@ -15639,7 +15639,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3006"/></summary>
         // DEBUG: const ImFontGlyph*FindGlyphNoFallback(ImWchar c) const
-        public ImFontGlyph FindGlyphNoFallback(ushort c)
+        public ImFontGlyph FindGlyphNoFallback(uint c)
         {
             var ___ret = Environment.Is64BitProcess ? __Internal64.FindGlyphNoFallback(__Instance, c) : __Internal32.FindGlyphNoFallback(__Instance, c);
             var __result0 = ImFontGlyph.__GetOrCreateInstance(___ret, false);
@@ -15648,7 +15648,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3007"/></summary>
         // DEBUG: float                       GetCharAdvance(ImWchar c) const     { return ((int)c < IndexAdvanceX.Size) ? IndexAdvanceX[(int)c] : FallbackAdvanceX; }
-        public float GetCharAdvance(ushort c)
+        public float GetCharAdvance(uint c)
         {
             var ___ret = Environment.Is64BitProcess ? __Internal64.GetCharAdvance(__Instance, c) : __Internal32.GetCharAdvance(__Instance, c);
             return ___ret;
@@ -15685,7 +15685,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3015"/></summary>
         // DEBUG: void              RenderChar(ImDrawList* draw_list, float size, const ImVec2& pos, ImU32 col, ImWchar c) const
-        public void RenderChar(ImDrawList draw_list, float size, Vector2 pos, uint col, ushort c)
+        public void RenderChar(ImDrawList draw_list, float size, Vector2 pos, uint col, uint c)
         {
             var ____arg0 = draw_list.__Instance;
             var __arg0 = new IntPtr(&____arg0);
@@ -15771,7 +15771,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3022"/></summary>
         // DEBUG: void              AddGlyph(const ImFontConfig* src_cfg, ImWchar c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x)
-        public void AddGlyph(ImFontConfig src_cfg, ushort c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x)
+        public void AddGlyph(ImFontConfig src_cfg, uint c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance_x)
         {
             var __arg0 = src_cfg is null ? IntPtr.Zero : src_cfg.__Instance;
             if (Environment.Is64BitProcess)
@@ -15786,7 +15786,7 @@ namespace DearImGui
 
         /// <summary>Makes 'dst' character/glyph points to 'src' character/glyph. Currently needs to be called AFTER fonts have been built.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3023"/></summary>
         // DEBUG: void              AddRemapChar(ImWchar dst, ImWchar src, bool overwrite_dst = true)
-        public void AddRemapChar(ushort dst, ushort src, bool overwrite_dst = true)
+        public void AddRemapChar(uint dst, uint src, bool overwrite_dst = true)
         {
             if (Environment.Is64BitProcess)
             {
@@ -15800,7 +15800,7 @@ namespace DearImGui
 
         /// <summary><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L3024"/></summary>
         // DEBUG: void              SetGlyphVisible(ImWchar c, bool visible)
-        public void SetGlyphVisible(ushort c, bool visible)
+        public void SetGlyphVisible(uint c, bool visible)
         {
             if (Environment.Is64BitProcess)
             {
@@ -15860,11 +15860,11 @@ namespace DearImGui
         }
 
         /// <summary>12-16.<br/>Out.<br/>Sparse. Index glyphs by Unicode code-point.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2983"/></summary>
-        public ImVector<ushort> IndexLookup
+        public ImVector<uint> IndexLookup
         {
             get
             {
-                return new ImVector<ushort>(Unsafe.As<ImVector.__Internal, ImVector<ushort>.__Internal>(ref ((__Internal*)__Instance)->IndexLookup))
+                return new ImVector<uint>(Unsafe.As<ImVector.__Internal, ImVector<uint>.__Internal>(ref ((__Internal*)__Instance)->IndexLookup))
                 /* DEBUG: TypeMapImVector.CSharpMarshalToManaged: Function: False, ReturnVarName: True */
                 ;
             }
@@ -15931,7 +15931,7 @@ namespace DearImGui
         }
 
         /// <summary>2.<br/>Out.<br/>= FFFD/'?'.<br/>Character used if a glyph isn't found.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2991"/></summary>
-        public ushort FallbackChar
+        public uint FallbackChar
         {
             get
             {
@@ -15945,7 +15945,7 @@ namespace DearImGui
         }
 
         /// <summary>2.<br/>Out.<br/>= '...'/'.'.<br/>Character used for ellipsis rendering.<br/><see href="https://github.com/ocornut/imgui/blob/c6e0284ac58b3f205c95365478888f7b53b077e2/imgui.h#L2992"/></summary>
-        public ushort EllipsisChar
+        public uint EllipsisChar
         {
             get
             {
@@ -16075,14 +16075,14 @@ namespace DearImGui
         {
             get
             {
-                return new Span<byte>(((__Internal*)__Instance)->Used4kPagesMap, 2);
+                return new Span<byte>(((__Internal*)__Instance)->Used4kPagesMap, 34);
             }
 
             set
             {
                 if (value != null)
                 {
-                    for (int i = 0; i < 2; i++)
+                    for (int i = 0; i < 34; i++)
                         ((__Internal*)__Instance)->Used4kPagesMap[i] = value[i];
                 }
             }
@@ -16122,32 +16122,32 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiViewport@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiViewport@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiViewport@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiViewport@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCenter@ImGuiViewport@@QBE?AUImVec2@@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCenter@ImGuiViewport@@QBE?AUImVec2@@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void GetCenter(IntPtr __instance, IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWorkCenter@ImGuiViewport@@QBE?AUImVec2@@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWorkCenter@ImGuiViewport@@QBE?AUImVec2@@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern void GetWorkCenter(IntPtr __instance, IntPtr @return);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiViewport@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiViewport@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiViewport@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiViewport@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCenter@ImGuiViewport@@QEBA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCenter@ImGuiViewport@@QEBA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCenter(IntPtr __instance, IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWorkCenter@ImGuiViewport@@QEBA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWorkCenter@ImGuiViewport@@QEBA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWorkCenter(IntPtr __instance, IntPtr @return);
 
         }
@@ -16447,20 +16447,20 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPlatformImeData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPlatformImeData@@QAE@XZ", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPlatformImeData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPlatformImeData@@QAE@$$QAU0@@Z", CallingConvention = CallingConvention.ThisCall)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPlatformImeData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPlatformImeData@@QEAA@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "??0ImGuiPlatformImeData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "??0ImGuiPlatformImeData@@QEAA@$$QEAU0@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ctor(IntPtr __instance, IntPtr _0);
 
         }
@@ -16643,2562 +16643,2562 @@ namespace DearImGui
 
         private partial struct __Internal32
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CreateContext@ImGui@@YAPAUImGuiContext@@PAUImFontAtlas@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CreateContext@ImGui@@YAPAUImGuiContext@@PAUImFontAtlas@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr CreateContext(IntPtr shared_font_atlas);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DestroyContext@ImGui@@YAXPAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DestroyContext@ImGui@@YAXPAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DestroyContext(IntPtr ctx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCurrentContext@ImGui@@YAPAUImGuiContext@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCurrentContext@ImGui@@YAPAUImGuiContext@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetCurrentContext();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCurrentContext@ImGui@@YAXPAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCurrentContext@ImGui@@YAXPAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCurrentContext(IntPtr ctx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetIO@ImGui@@YAAAUImGuiIO@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetIO@ImGui@@YAAAUImGuiIO@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetIO();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyle@ImGui@@YAAAUImGuiStyle@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyle@ImGui@@YAAAUImGuiStyle@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyle();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NewFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NewFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NewFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Render@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Render@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Render();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDrawData@ImGui@@YAPAUImDrawData@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDrawData@ImGui@@YAPAUImDrawData@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDrawData();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowDemoWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowDemoWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowDemoWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowMetricsWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowMetricsWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowMetricsWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowDebugLogWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowDebugLogWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowDebugLogWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStackToolWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStackToolWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowStackToolWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowAboutWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowAboutWindow@ImGui@@YAXPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowAboutWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStyleEditor@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStyleEditor@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowStyleEditor(IntPtr @ref);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStyleSelector@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStyleSelector@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ShowStyleSelector([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowFontSelector@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowFontSelector@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowFontSelector([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowUserGuide@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowUserGuide@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowUserGuide();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVersion@ImGui@@YAPBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVersion@ImGui@@YAPBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetVersion();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsDark@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsDark@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsDark(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsLight@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsLight@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsLight(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsClassic@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsClassic@ImGui@@YAXPAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsClassic(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Begin@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Begin@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Begin([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool* p_open, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?End@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?End@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void End();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChild@ImGui@@YA_NPBDABUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChild@ImGui@@YA_NPBDABUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChild([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr size, bool border, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChild@ImGui@@YA_NIABUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChild@ImGui@@YA_NIABUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChild_1(uint id, IntPtr size, bool border, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndChild@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndChild@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndChild();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowAppearing@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowAppearing@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowAppearing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowCollapsed@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowCollapsed@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowCollapsed();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowFocused@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowFocused@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowFocused(ImGuiFocusedFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowHovered(ImGuiHoveredFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetWindowDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowSize(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetWindowWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetWindowHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowPos@ImGui@@YAXABUImVec2@@H0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowPos@ImGui@@YAXABUImVec2@@H0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowPos(IntPtr pos, ImGuiCond cond, IntPtr pivot);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowSize@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowSize@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowSize(IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowSizeConstraints@ImGui@@YAXABUImVec2@@0P6AXPAUImGuiSizeCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowSizeConstraints@ImGui@@YAXABUImVec2@@0P6AXPAUImGuiSizeCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowSizeConstraints(IntPtr size_min, IntPtr size_max, IntPtr custom_callback, IntPtr custom_callback_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowContentSize@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowContentSize@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowContentSize(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowCollapsed(bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowScroll@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowScroll@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowScroll(IntPtr scroll);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowBgAlpha@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowBgAlpha@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowBgAlpha(float alpha);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowPos@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowPos@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowPos(IntPtr pos, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowSize@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowSize@ImGui@@YAXABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowSize(IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowCollapsed(bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFontScale@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFontScale@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFontScale(float scale);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowPos@ImGui@@YAXPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowPos@ImGui@@YAXPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowPos([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, IntPtr pos, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowSize@ImGui@@YAXPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowSize@ImGui@@YAXPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowSize([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowCollapsed@ImGui@@YAXPBD_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowCollapsed@ImGui@@YAXPBD_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowCollapsed([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFocus@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFocus@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFocus([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetContentRegionAvail@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetContentRegionAvail@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetContentRegionAvail(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetContentRegionMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowContentRegionMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowContentRegionMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowContentRegionMin(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowContentRegionMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollX(float scroll_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollY(float scroll_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollMaxX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollMaxX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollMaxX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollMaxY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollMaxY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollMaxY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollHereX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollHereX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollHereX(float center_x_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollHereY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollHereY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollHereY(float center_y_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollFromPosX@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollFromPosX@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollFromPosX(float local_x, float center_x_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollFromPosY@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollFromPosY@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollFromPosY(float local_y, float center_y_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushFont@ImGui@@YAXPAUImFont@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushFont@ImGui@@YAXPAUImFont@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushFont(IntPtr font);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopFont@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopFont@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopFont();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleColor@ImGui@@YAXHI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleColor@ImGui@@YAXHI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleColor(ImGuiCol idx, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleColor@ImGui@@YAXHABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleColor@ImGui@@YAXHABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleColor(ImGuiCol idx, IntPtr col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopStyleColor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopStyleColor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopStyleColor(int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleVar@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleVar@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleVar(ImGuiStyleVar idx, float val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleVar@ImGui@@YAXHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleVar@ImGui@@YAXHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleVar(ImGuiStyleVar idx, IntPtr val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopStyleVar@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopStyleVar@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopStyleVar(int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTabStop@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTabStop@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushTabStop(bool tab_stop);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTabStop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTabStop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopTabStop();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushButtonRepeat@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushButtonRepeat@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushButtonRepeat(bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopButtonRepeat@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopButtonRepeat@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopButtonRepeat();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushItemWidth(float item_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopItemWidth@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopItemWidth@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopItemWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemWidth(float item_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcItemWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcItemWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float CalcItemWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTextWrapPos@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTextWrapPos@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushTextWrapPos(float wrap_local_pos_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTextWrapPos@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTextWrapPos@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopTextWrapPos();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFont@ImGui@@YAPAUImFont@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFont@ImGui@@YAPAUImFont@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetFont();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFontSize@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFontSize@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFontSize();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFontTexUvWhitePixel@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFontTexUvWhitePixel@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetFontTexUvWhitePixel(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(ImGuiCol idx, float alpha_mul);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAIABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAIABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(IntPtr col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAII@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyleColorVec4@ImGui@@YAABUImVec4@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyleColorVec4@ImGui@@YAABUImVec4@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyleColorVec4(ImGuiCol idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Separator@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Separator@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Separator();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SameLine@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SameLine@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SameLine(float offset_from_start_x, float spacing);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NewLine@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NewLine@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NewLine();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Spacing@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Spacing@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Spacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Dummy@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Dummy@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Dummy(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Indent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Indent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Indent(float indent_w);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Unindent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Unindent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Unindent(float indent_w);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BeginGroup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndGroup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPosX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPosX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetCursorPosX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPosY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPosY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetCursorPosY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPos@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPos@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPos(IntPtr local_pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPosX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPosX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPosX(float local_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPosY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPosY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPosY(float local_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorStartPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorStartPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorStartPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorScreenPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorScreenPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorScreenPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorScreenPos@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorScreenPos@ImGui@@YAXABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorScreenPos(IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AlignTextToFramePadding@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AlignTextToFramePadding@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AlignTextToFramePadding();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTextLineHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTextLineHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTextLineHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTextLineHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTextLineHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTextLineHeightWithSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFrameHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFrameHeightWithSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID_1(int int_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopID@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopID@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopID();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextUnformatted@ImGui@@YAXPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextUnformatted@ImGui@@YAXPBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextUnformatted([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Text@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Text@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Text([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextColored@ImGui@@YAXABUImVec4@@PBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextColored@ImGui@@YAXABUImVec4@@PBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextColored(IntPtr col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextColoredV@ImGui@@YAXABUImVec4@@PBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextColoredV@ImGui@@YAXABUImVec4@@PBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextColoredV(IntPtr col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextDisabled@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextDisabled@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextDisabled([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextDisabledV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextDisabledV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextDisabledV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextWrapped@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextWrapped@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextWrapped([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextWrappedV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextWrappedV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextWrappedV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LabelText@ImGui@@YAXPBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LabelText@ImGui@@YAXPBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LabelText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LabelTextV@ImGui@@YAXPBD0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LabelTextV@ImGui@@YAXPBD0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LabelTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BulletText@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BulletText@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BulletText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BulletTextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BulletTextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BulletTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SeparatorText@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SeparatorText@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SeparatorText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Button@ImGui@@YA_NPBDABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Button@ImGui@@YA_NPBDABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Button([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SmallButton@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SmallButton@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SmallButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InvisibleButton@ImGui@@YA_NPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InvisibleButton@ImGui@@YA_NPBDABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InvisibleButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr size, ImGuiButtonFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ArrowButton@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ArrowButton@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ArrowButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiDir dir);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Checkbox@ImGui@@YA_NPBDPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Checkbox@ImGui@@YA_NPBDPA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Checkbox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPBDPAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPBDPAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CheckboxFlags([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* flags, int flags_value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPBDPAII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPBDPAII@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CheckboxFlags_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, uint* flags, uint flags_value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RadioButton@ImGui@@YA_NPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RadioButton@ImGui@@YA_NPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool RadioButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool active);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RadioButton@ImGui@@YA_NPBDPAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RadioButton@ImGui@@YA_NPBDPAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool RadioButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ProgressBar@ImGui@@YAXMABUImVec2@@PBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ProgressBar@ImGui@@YAXMABUImVec2@@PBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ProgressBar(float fraction, IntPtr size_arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Bullet@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Bullet@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Bullet();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Image@ImGui@@YAXPAXABUImVec2@@11ABUImVec4@@2@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Image@ImGui@@YAXPAXABUImVec2@@11ABUImVec4@@2@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Image(IntPtr user_texture_id, IntPtr size, IntPtr uv0, IntPtr uv1, IntPtr tint_col, IntPtr border_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ImageButton@ImGui@@YA_NPBDPAXABUImVec2@@22ABUImVec4@@3@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ImageButton@ImGui@@YA_NPBDPAXABUImVec2@@22ABUImVec4@@3@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ImageButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr user_texture_id, IntPtr size, IntPtr uv0, IntPtr uv1, IntPtr bg_col, IntPtr tint_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginCombo@ImGui@@YA_NPBD0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginCombo@ImGui@@YA_NPBD0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginCombo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string preview_value, ImGuiComboFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndCombo@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndCombo@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndCombo();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPBDPAHQBQBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPBDPAHQBQBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.LPArray)] string[] items, int items_count, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPBDPAH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPBDPAH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string items_separated_by_zeros, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPBDPAHP6A_NPAXHPAPBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPBDPAHP6A_NPAXHPAPBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, IntPtr items_getter, IntPtr data, int items_count, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat@ImGui@@YA_NPBDPAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat@ImGui@@YA_NPBDPAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat2@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat2@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat3@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat3@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat4@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat4@ImGui@@YA_NPBDQAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloatRange2@ImGui@@YA_NPBDPAM1MMM00H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloatRange2@ImGui@@YA_NPBDPAM1MMM00H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloatRange2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v_current_min, float* v_current_max, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format_max, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt@ImGui@@YA_NPBDPAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt@ImGui@@YA_NPBDPAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt2@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt2@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt3@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt3@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt4@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt4@ImGui@@YA_NPBDQAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragIntRange2@ImGui@@YA_NPBDPAH1MHH00H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragIntRange2@ImGui@@YA_NPBDPAH1MHH00H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragIntRange2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v_current_min, int* v_current_max, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format_max, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragScalar@ImGui@@YA_NPBDHPAXMPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragScalar@ImGui@@YA_NPBDHPAXMPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, float v_speed, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragScalarN@ImGui@@YA_NPBDHPAXHMPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragScalarN@ImGui@@YA_NPBDHPAXHMPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, float v_speed, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat2@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat2@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat3@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat3@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat4@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat4@ImGui@@YA_NPBDQAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderAngle@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderAngle@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderAngle([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v_rad, float v_degrees_min, float v_degrees_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt@ImGui@@YA_NPBDPAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt@ImGui@@YA_NPBDPAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt2@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt2@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt3@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt3@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt4@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt4@ImGui@@YA_NPBDQAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderScalar@ImGui@@YA_NPBDHPAXPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderScalar@ImGui@@YA_NPBDHPAXPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderScalarN@ImGui@@YA_NPBDHPAXHPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderScalarN@ImGui@@YA_NPBDHPAXHPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderFloat@ImGui@@YA_NPBDABUImVec2@@PAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderFloat@ImGui@@YA_NPBDABUImVec2@@PAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderInt@ImGui@@YA_NPBDABUImVec2@@PAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderInt@ImGui@@YA_NPBDABUImVec2@@PAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderScalar@ImGui@@YA_NPBDABUImVec2@@HPAXPBX30H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderScalar@ImGui@@YA_NPBDABUImVec2@@HPAXPBX30H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, ImGuiDataType data_type, IntPtr p_data, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputText@ImGui@@YA_NPBDPADIHP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputText@ImGui@@YA_NPBDPADIHP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, sbyte* buf, UIntPtr buf_size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputTextMultiline@ImGui@@YA_NPBDPADIABUImVec2@@HP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputTextMultiline@ImGui@@YA_NPBDPADIABUImVec2@@HP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputTextMultiline([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, sbyte* buf, UIntPtr buf_size, IntPtr size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputTextWithHint@ImGui@@YA_NPBD0PADIHP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputTextWithHint@ImGui@@YA_NPBD0PADIHP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputTextWithHint([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string hint, sbyte* buf, UIntPtr buf_size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat@ImGui@@YA_NPBDPAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float step, float step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat2@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat2@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat3@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat3@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat4@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat4@ImGui@@YA_NPBDQAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt@ImGui@@YA_NPBDPAHHHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt@ImGui@@YA_NPBDPAHHHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int step, int step_fast, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt2@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt2@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt3@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt3@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt4@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt4@ImGui@@YA_NPBDQAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputDouble@ImGui@@YA_NPBDPANNN0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputDouble@ImGui@@YA_NPBDPANNN0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputDouble([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, double* v, double step, double step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputScalar@ImGui@@YA_NPBDHPAXPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputScalar@ImGui@@YA_NPBDHPAXPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, IntPtr p_step, IntPtr p_step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputScalarN@ImGui@@YA_NPBDHPAXHPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputScalarN@ImGui@@YA_NPBDHPAXHPBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, IntPtr p_step, IntPtr p_step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorEdit3@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorEdit3@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorEdit3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorEdit4@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorEdit4@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorEdit4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorPicker3@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorPicker3@ImGui@@YA_NPBDQAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorPicker3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorPicker4@ImGui@@YA_NPBDQAMHPBM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorPicker4@ImGui@@YA_NPBDQAMHPBM@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorPicker4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags, float* ref_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorButton@ImGui@@YA_NPBDABUImVec4@@HABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorButton@ImGui@@YA_NPBDABUImVec4@@HABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string desc_id, IntPtr col, ImGuiColorEditFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColorEditOptions@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColorEditOptions@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColorEditOptions(ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPBXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPBXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode(IntPtr ptr_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeV@ImGui@@YA_NPBD0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeV@ImGui@@YA_NPBD0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeV@ImGui@@YA_NPBXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeV@ImGui@@YA_NPBXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeV(IntPtr ptr_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBDH0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBDH0ZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBXHPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPBXHPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx(IntPtr ptr_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPBDH0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPBDH0PAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeExV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPBXHPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPBXHPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeExV(IntPtr ptr_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePush@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePush@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePush([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePush@ImGui@@YAXPBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePush@ImGui@@YAXPBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePush(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePop();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTreeNodeToLabelSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTreeNodeToLabelSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTreeNodeToLabelSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CollapsingHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CollapsingHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_visible, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemOpen@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemOpen@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemOpen(bool is_open, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Selectable@ImGui@@YA_NPBD_NHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Selectable@ImGui@@YA_NPBD_NHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Selectable([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool selected, ImGuiSelectableFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Selectable@ImGui@@YA_NPBDPA_NHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Selectable@ImGui@@YA_NPBDPA_NHABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Selectable_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_selected, ImGuiSelectableFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginListBox@ImGui@@YA_NPBDABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginListBox@ImGui@@YA_NPBDABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndListBox@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndListBox@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndListBox();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ListBox@ImGui@@YA_NPBDPAHQBQBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ListBox@ImGui@@YA_NPBDPAHQBQBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.LPArray)] string[] items, int items_count, int height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ListBox@ImGui@@YA_NPBDPAHP6A_NPAXHPAPBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ListBox@ImGui@@YA_NPBDPAHP6A_NPAXHPAPBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, IntPtr items_getter, IntPtr data, int items_count, int height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotLines@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotLines@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotLines([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* values, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size, int stride);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotLines@ImGui@@YAXPBDP6AMPAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotLines@ImGui@@YAXPBDP6AMPAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotLines([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr values_getter, IntPtr data, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotHistogram@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotHistogram@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotHistogram([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* values, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size, int stride);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotHistogram@ImGui@@YAXPBDP6AMPAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotHistogram@ImGui@@YAXPBDP6AMPAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotHistogram([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr values_getter, IntPtr data, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, bool b);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, int v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPBDI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPBDI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value_2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, uint v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPBDM0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPBDM0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, float v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string float_format);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMainMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMainMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMainMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMainMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMainMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMainMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMenu@ImGui@@YA_NPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMenu@ImGui@@YA_NPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMenu([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMenu@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMenu@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMenu();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MenuItem@ImGui@@YA_NPBD0_N1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MenuItem@ImGui@@YA_NPBD0_N1@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool MenuItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string shortcut, bool selected, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MenuItem@ImGui@@YA_NPBD0PA_N_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MenuItem@ImGui@@YA_NPBD0PA_N_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool MenuItem_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string shortcut, bool* p_selected, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTooltip@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTooltip@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTooltip@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTooltip@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTooltip([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTooltipV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTooltipV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTooltipV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginItemTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginItemTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginItemTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemTooltip@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemTooltip@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemTooltip([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemTooltipV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemTooltipV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemTooltipV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopup@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopup@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopup([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupModal@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupModal@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupModal([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool* p_open, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndPopup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopup@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopup@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopup([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopup@ImGui@@YAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopup@ImGui@@YAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopup_1(uint id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopupOnItemClick@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopupOnItemClick@ImGui@@YAXPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopupOnItemClick([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CloseCurrentPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CloseCurrentPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CloseCurrentPopup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextItem@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextItem@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextWindow@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextWindow@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextWindow([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextVoid@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextVoid@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextVoid([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPopupOpen@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPopupOpen@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPopupOpen([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTable@ImGui@@YA_NPBDHHABUImVec2@@M@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTable@ImGui@@YA_NPBDHHABUImVec2@@M@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTable([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, int column, ImGuiTableFlags flags, IntPtr outer_size, float inner_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTable@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTable@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTable();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableNextRow@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableNextRow@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableNextRow(ImGuiTableRowFlags row_flags, float min_row_height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableNextColumn@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableNextColumn@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TableNextColumn();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetColumnIndex@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetColumnIndex@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TableSetColumnIndex(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetupColumn@ImGui@@YAXPBDHMI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetupColumn@ImGui@@YAXPBDHMI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetupColumn([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTableColumnFlags flags, float init_width_or_weight, uint user_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetupScrollFreeze@ImGui@@YAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetupScrollFreeze@ImGui@@YAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetupScrollFreeze(int cols, int rows);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableHeadersRow@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableHeadersRow@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableHeadersRow();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableHeader@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableHeader@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetSortSpecs@ImGui@@YAPAUImGuiTableSortSpecs@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetSortSpecs@ImGui@@YAPAUImGuiTableSortSpecs@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr TableGetSortSpecs();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetColumnCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetColumnIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetRowIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetRowIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetRowIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnName@ImGui@@YAPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnName@ImGui@@YAPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr TableGetColumnName(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnFlags@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnFlags@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiTableColumnFlags TableGetColumnFlags(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetColumnEnabled@ImGui@@YAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetColumnEnabled@ImGui@@YAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetColumnEnabled(int column_n, bool v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetBgColor@ImGui@@YAXHIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetBgColor@ImGui@@YAXHIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetBgColor(ImGuiTableBgTarget target, uint color, int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Columns@ImGui@@YAXHPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Columns@ImGui@@YAXHPBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Columns(int count, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string id, bool border);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NextColumn@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NextColumn@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NextColumn();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetColumnIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnWidth@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnWidth@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetColumnWidth(int column_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColumnWidth@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColumnWidth@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColumnWidth(int column_index, float width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnOffset@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnOffset@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetColumnOffset(int column_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColumnOffset@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColumnOffset@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColumnOffset(int column_index, float offset_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnsCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnsCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetColumnsCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTabBar@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTabBar@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTabBar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTabBarFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTabBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTabBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTabBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTabItem@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTabItem@ImGui@@YA_NPBDPA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTabItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_open, ImGuiTabItemFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTabItem@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTabItem@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTabItem();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TabItemButton@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TabItemButton@ImGui@@YA_NPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TabItemButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTabItemFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTabItemClosed@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTabItemClosed@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTabItemClosed([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tab_or_docked_window_label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToTTY@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToTTY@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToTTY(int auto_open_depth);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToFile@ImGui@@YAXHPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToFile@ImGui@@YAXHPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToFile(int auto_open_depth, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToClipboard@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToClipboard@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToClipboard(int auto_open_depth);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogFinish@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogFinish@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogFinish();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogButtons@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogButtons@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogButtons();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogText@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogText@ImGui@@YAXPBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogTextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogTextV@ImGui@@YAXPBDPAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDragDropSource@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDragDropSource@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginDragDropSource(ImGuiDragDropFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetDragDropPayload@ImGui@@YA_NPBDPBXIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetDragDropPayload@ImGui@@YA_NPBDPBXIH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SetDragDropPayload([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type, IntPtr data, UIntPtr sz, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDragDropSource@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDragDropSource@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDragDropSource();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDragDropTarget@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDragDropTarget@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginDragDropTarget();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AcceptDragDropPayload@ImGui@@YAPBUImGuiPayload@@PBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AcceptDragDropPayload@ImGui@@YAPBUImGuiPayload@@PBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr AcceptDragDropPayload([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type, ImGuiDragDropFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDragDropTarget@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDragDropTarget@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDragDropTarget();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDragDropPayload@ImGui@@YAPBUImGuiPayload@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDragDropPayload@ImGui@@YAPBUImGuiPayload@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDragDropPayload();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDisabled@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDisabled@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BeginDisabled(bool disabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDisabled@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDisabled@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDisabled();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRect@ImGui@@YAXABUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRect@ImGui@@YAXABUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushClipRect(IntPtr clip_rect_min, IntPtr clip_rect_max, bool intersect_with_current_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopClipRect@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopClipRect@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopClipRect();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemDefaultFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemDefaultFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemDefaultFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetKeyboardFocusHere@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetKeyboardFocusHere@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetKeyboardFocusHere(int offset);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemAllowOverlap@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemAllowOverlap@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemAllowOverlap();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemHovered(ImGuiHoveredFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemActive();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemFocused();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemClicked(ImGuiMouseButton mouse_button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemVisible@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemVisible@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemVisible();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemEdited@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemEdited@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemEdited();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemActivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemActivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemActivated();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemDeactivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemDeactivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemDeactivated();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemDeactivatedAfterEdit@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemDeactivatedAfterEdit@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemDeactivatedAfterEdit();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemToggledOpen@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemToggledOpen@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemToggledOpen();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemHovered@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemHovered@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemHovered();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemActive();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemFocused();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemID@ImGui@@YAIXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemID@ImGui@@YAIXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetItemID();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectMin(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectSize(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMainViewport@ImGui@@YAPAUImGuiViewport@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMainViewport@ImGui@@YAPAUImGuiViewport@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetMainViewport();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBackgroundDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBackgroundDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetBackgroundDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetForegroundDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetForegroundDrawList@ImGui@@YAPAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetForegroundDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsRectVisible@ImGui@@YA_NABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsRectVisible@ImGui@@YA_NABUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsRectVisible(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsRectVisible@ImGui@@YA_NABUImVec2@@0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsRectVisible@ImGui@@YA_NABUImVec2@@0@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsRectVisible(IntPtr rect_min, IntPtr rect_max);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTime@ImGui@@YANXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTime@ImGui@@YANXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern double GetTime();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetFrameCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDrawListSharedData@ImGui@@YAPAUImDrawListSharedData@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDrawListSharedData@ImGui@@YAPAUImDrawListSharedData@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDrawListSharedData();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyleColorName@ImGui@@YAPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyleColorName@ImGui@@YAPBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyleColorName(ImGuiCol idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetStateStorage@ImGui@@YAXPAUImGuiStorage@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetStateStorage@ImGui@@YAXPAUImGuiStorage@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetStateStorage(IntPtr storage);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStateStorage@ImGui@@YAPAUImGuiStorage@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStateStorage@ImGui@@YAPAUImGuiStorage@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStateStorage();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChildFrame@ImGui@@YA_NIABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChildFrame@ImGui@@YA_NIABUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChildFrame(uint id, IntPtr size, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndChildFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndChildFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndChildFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcTextSize@ImGui@@YA?AUImVec2@@PBD0_NM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcTextSize@ImGui@@YA?AUImVec2@@PBD0_NM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CalcTextSize(IntPtr @return, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, bool hide_text_after_double_hash, float wrap_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertU32ToFloat4@ImGui@@YA?AUImVec4@@I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertU32ToFloat4@ImGui@@YA?AUImVec4@@I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertU32ToFloat4(IntPtr @return, uint @in);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertFloat4ToU32@ImGui@@YAIABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertFloat4ToU32@ImGui@@YAIABUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint ColorConvertFloat4ToU32(IntPtr @in);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertRGBtoHSV@ImGui@@YAXMMMAAM00@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertRGBtoHSV@ImGui@@YAXMMMAAM00@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertRGBtoHSV(float r, float g, float b, float* out_h, float* out_s, float* out_v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertHSVtoRGB@ImGui@@YAXMMMAAM00@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertHSVtoRGB@ImGui@@YAXMMMAAM00@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertHSVtoRGB(float h, float s, float v, float* out_r, float* out_g, float* out_b);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyDown@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyDown@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyDown(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyPressed@ImGui@@YA_NW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyPressed@ImGui@@YA_NW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyPressed(ImGuiKey key, bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyReleased@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyReleased@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyReleased(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyPressedAmount@ImGui@@YAHW4ImGuiKey@@MM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyPressedAmount@ImGui@@YAHW4ImGuiKey@@MM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetKeyPressedAmount(ImGuiKey key, float repeat_delay, float rate);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyName@ImGui@@YAPBDW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyName@ImGui@@YAPBDW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetKeyName(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextFrameWantCaptureKeyboard@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextFrameWantCaptureKeyboard@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextFrameWantCaptureKeyboard(bool want_capture_keyboard);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDown@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDown@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDown(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseClicked@ImGui@@YA_NH_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseClicked@ImGui@@YA_NH_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseClicked(ImGuiMouseButton button, bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseReleased@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseReleased@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseReleased(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDoubleClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDoubleClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDoubleClicked(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseClickedCount@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseClickedCount@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetMouseClickedCount(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseHoveringRect@ImGui@@YA_NABUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseHoveringRect@ImGui@@YA_NABUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseHoveringRect(IntPtr r_min, IntPtr r_max, bool clip);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMousePosValid@ImGui@@YA_NPBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMousePosValid@ImGui@@YA_NPBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMousePosValid(IntPtr mouse_pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyMouseDown@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyMouseDown@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyMouseDown();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMousePos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMousePos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMousePos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMousePosOnOpeningCurrentPopup@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMousePosOnOpeningCurrentPopup@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMousePosOnOpeningCurrentPopup(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDragging@ImGui@@YA_NHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDragging@ImGui@@YA_NHM@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDragging(ImGuiMouseButton button, float lock_threshold);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseDragDelta@ImGui@@YA?AUImVec2@@HM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseDragDelta@ImGui@@YA?AUImVec2@@HM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMouseDragDelta(IntPtr @return, ImGuiMouseButton button, float lock_threshold);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ResetMouseDragDelta@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ResetMouseDragDelta@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ResetMouseDragDelta(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseCursor@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseCursor@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiMouseCursor GetMouseCursor();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetMouseCursor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetMouseCursor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetMouseCursor(ImGuiMouseCursor cursor_type);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextFrameWantCaptureMouse@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextFrameWantCaptureMouse@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextFrameWantCaptureMouse(bool want_capture_mouse);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetClipboardText@ImGui@@YAPBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetClipboardText@ImGui@@YAPBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetClipboardText();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetClipboardText@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetClipboardText@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetClipboardText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LoadIniSettingsFromDisk@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LoadIniSettingsFromDisk@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LoadIniSettingsFromDisk([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LoadIniSettingsFromMemory@ImGui@@YAXPBDI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LoadIniSettingsFromMemory@ImGui@@YAXPBDI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LoadIniSettingsFromMemory([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_data, UIntPtr ini_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SaveIniSettingsToDisk@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SaveIniSettingsToDisk@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SaveIniSettingsToDisk([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SaveIniSettingsToMemory@ImGui@@YAPBDPAI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SaveIniSettingsToMemory@ImGui@@YAPBDPAI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr SaveIniSettingsToMemory(UIntPtr* out_ini_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DebugTextEncoding@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DebugTextEncoding@ImGui@@YAXPBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DebugTextEncoding([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DebugCheckVersionAndDataLayout@ImGui@@YA_NPBDIIIIII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DebugCheckVersionAndDataLayout@ImGui@@YA_NPBDIIIIII@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DebugCheckVersionAndDataLayout([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string version_str, UIntPtr sz_io, UIntPtr sz_style, UIntPtr sz_vec2, UIntPtr sz_vec4, UIntPtr sz_drawvert, UIntPtr sz_drawidx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAllocatorFunctions@ImGui@@YAXP6APAXIPAX@ZP6AX00@Z0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAllocatorFunctions@ImGui@@YAXP6APAXIPAX@ZP6AX00@Z0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetAllocatorFunctions(IntPtr alloc_func, IntPtr free_func, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetAllocatorFunctions@ImGui@@YAXPAP6APAXIPAX@ZPAP6AX00@ZPAPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetAllocatorFunctions@ImGui@@YAXPAP6APAXIPAX@ZPAP6AX00@ZPAPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetAllocatorFunctions(IntPtr p_alloc_func, IntPtr p_free_func, IntPtr* p_user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MemAlloc@ImGui@@YAPAXI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MemAlloc@ImGui@@YAPAXI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr MemAlloc(UIntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MemFree@ImGui@@YAXPAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MemFree@ImGui@@YAXPAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void MemFree(IntPtr ptr);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyIndex@ImGui@@YA?AW4ImGuiKey@@W42@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyIndex@ImGui@@YA?AW4ImGuiKey@@W42@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiKey GetKeyIndex(ImGuiKey key);
 
         }
 
         private partial struct __Internal64
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CreateContext@ImGui@@YAPEAUImGuiContext@@PEAUImFontAtlas@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CreateContext@ImGui@@YAPEAUImGuiContext@@PEAUImFontAtlas@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr CreateContext(IntPtr shared_font_atlas);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DestroyContext@ImGui@@YAXPEAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DestroyContext@ImGui@@YAXPEAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DestroyContext(IntPtr ctx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCurrentContext@ImGui@@YAPEAUImGuiContext@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCurrentContext@ImGui@@YAPEAUImGuiContext@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetCurrentContext();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCurrentContext@ImGui@@YAXPEAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCurrentContext@ImGui@@YAXPEAUImGuiContext@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCurrentContext(IntPtr ctx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetIO@ImGui@@YAAEAUImGuiIO@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetIO@ImGui@@YAAEAUImGuiIO@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetIO();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyle@ImGui@@YAAEAUImGuiStyle@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyle@ImGui@@YAAEAUImGuiStyle@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyle();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NewFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NewFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NewFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Render@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Render@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Render();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDrawData@ImGui@@YAPEAUImDrawData@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDrawData@ImGui@@YAPEAUImDrawData@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDrawData();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowDemoWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowDemoWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowDemoWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowMetricsWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowMetricsWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowMetricsWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowDebugLogWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowDebugLogWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowDebugLogWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStackToolWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStackToolWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowStackToolWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowAboutWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowAboutWindow@ImGui@@YAXPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowAboutWindow(bool* p_open);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStyleEditor@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStyleEditor@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowStyleEditor(IntPtr @ref);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowStyleSelector@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowStyleSelector@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ShowStyleSelector([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowFontSelector@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowFontSelector@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowFontSelector([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ShowUserGuide@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ShowUserGuide@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ShowUserGuide();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetVersion@ImGui@@YAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetVersion@ImGui@@YAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetVersion();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsDark@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsDark@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsDark(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsLight@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsLight@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsLight(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?StyleColorsClassic@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?StyleColorsClassic@ImGui@@YAXPEAUImGuiStyle@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void StyleColorsClassic(IntPtr dst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Begin@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Begin@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Begin([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool* p_open, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?End@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?End@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void End();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChild@ImGui@@YA_NPEBDAEBUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChild@ImGui@@YA_NPEBDAEBUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChild([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr size, bool border, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChild@ImGui@@YA_NIAEBUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChild@ImGui@@YA_NIAEBUImVec2@@_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChild_1(uint id, IntPtr size, bool border, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndChild@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndChild@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndChild();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowAppearing@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowAppearing@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowAppearing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowCollapsed@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowCollapsed@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowCollapsed();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowFocused@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowFocused@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowFocused(ImGuiFocusedFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsWindowHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsWindowHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsWindowHovered(ImGuiHoveredFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetWindowDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowSize(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetWindowWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetWindowHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowPos@ImGui@@YAXAEBUImVec2@@H0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowPos@ImGui@@YAXAEBUImVec2@@H0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowPos(IntPtr pos, ImGuiCond cond, IntPtr pivot);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowSize@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowSize@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowSize(IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowSizeConstraints@ImGui@@YAXAEBUImVec2@@0P6AXPEAUImGuiSizeCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowSizeConstraints@ImGui@@YAXAEBUImVec2@@0P6AXPEAUImGuiSizeCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowSizeConstraints(IntPtr size_min, IntPtr size_max, IntPtr custom_callback, IntPtr custom_callback_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowContentSize@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowContentSize@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowContentSize(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowCollapsed(bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowScroll@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowScroll@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowScroll(IntPtr scroll);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextWindowBgAlpha@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextWindowBgAlpha@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextWindowBgAlpha(float alpha);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowPos@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowPos@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowPos(IntPtr pos, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowSize@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowSize@ImGui@@YAXAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowSize(IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowCollapsed@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowCollapsed(bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFontScale@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFontScale@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFontScale(float scale);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowPos@ImGui@@YAXPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowPos@ImGui@@YAXPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowPos([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, IntPtr pos, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowSize@ImGui@@YAXPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowSize@ImGui@@YAXPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowSize([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, IntPtr size, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowCollapsed@ImGui@@YAXPEBD_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowCollapsed@ImGui@@YAXPEBD_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowCollapsed([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool collapsed, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetWindowFocus@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetWindowFocus@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetWindowFocus([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetContentRegionAvail@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetContentRegionAvail@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetContentRegionAvail(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetContentRegionMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowContentRegionMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowContentRegionMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowContentRegionMin(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetWindowContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetWindowContentRegionMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetWindowContentRegionMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollX(float scroll_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollY(float scroll_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollMaxX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollMaxX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollMaxX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetScrollMaxY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetScrollMaxY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetScrollMaxY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollHereX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollHereX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollHereX(float center_x_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollHereY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollHereY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollHereY(float center_y_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollFromPosX@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollFromPosX@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollFromPosX(float local_x, float center_x_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetScrollFromPosY@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetScrollFromPosY@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetScrollFromPosY(float local_y, float center_y_ratio);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushFont@ImGui@@YAXPEAUImFont@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushFont@ImGui@@YAXPEAUImFont@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushFont(IntPtr font);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopFont@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopFont@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopFont();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleColor@ImGui@@YAXHI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleColor@ImGui@@YAXHI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleColor(ImGuiCol idx, uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleColor@ImGui@@YAXHAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleColor@ImGui@@YAXHAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleColor(ImGuiCol idx, IntPtr col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopStyleColor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopStyleColor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopStyleColor(int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleVar@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleVar@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleVar(ImGuiStyleVar idx, float val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushStyleVar@ImGui@@YAXHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushStyleVar@ImGui@@YAXHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushStyleVar(ImGuiStyleVar idx, IntPtr val);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopStyleVar@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopStyleVar@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopStyleVar(int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTabStop@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTabStop@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushTabStop(bool tab_stop);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTabStop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTabStop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopTabStop();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushButtonRepeat@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushButtonRepeat@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushButtonRepeat(bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopButtonRepeat@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopButtonRepeat@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopButtonRepeat();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushItemWidth(float item_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopItemWidth@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopItemWidth@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopItemWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemWidth@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemWidth(float item_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcItemWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcItemWidth@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float CalcItemWidth();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushTextWrapPos@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushTextWrapPos@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushTextWrapPos(float wrap_local_pos_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopTextWrapPos@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopTextWrapPos@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopTextWrapPos();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFont@ImGui@@YAPEAUImFont@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFont@ImGui@@YAPEAUImFont@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetFont();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFontSize@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFontSize@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFontSize();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFontTexUvWhitePixel@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFontTexUvWhitePixel@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetFontTexUvWhitePixel(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAIHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAIHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(ImGuiCol idx, float alpha_mul);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAIAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAIAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(IntPtr col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColorU32@ImGui@@YAII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColorU32@ImGui@@YAII@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetColorU32(uint col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyleColorVec4@ImGui@@YAAEBUImVec4@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyleColorVec4@ImGui@@YAAEBUImVec4@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyleColorVec4(ImGuiCol idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Separator@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Separator@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Separator();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SameLine@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SameLine@ImGui@@YAXMM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SameLine(float offset_from_start_x, float spacing);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NewLine@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NewLine@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NewLine();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Spacing@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Spacing@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Spacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Dummy@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Dummy@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Dummy(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Indent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Indent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Indent(float indent_w);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Unindent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Unindent@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Unindent(float indent_w);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BeginGroup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndGroup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndGroup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPosX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPosX@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetCursorPosX();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorPosY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorPosY@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetCursorPosY();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPos@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPos@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPos(IntPtr local_pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPosX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPosX@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPosX(float local_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorPosY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorPosY@ImGui@@YAXM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorPosY(float local_y);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorStartPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorStartPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorStartPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetCursorScreenPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetCursorScreenPos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetCursorScreenPos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetCursorScreenPos@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetCursorScreenPos@ImGui@@YAXAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetCursorScreenPos(IntPtr pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AlignTextToFramePadding@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AlignTextToFramePadding@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void AlignTextToFramePadding();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTextLineHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTextLineHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTextLineHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTextLineHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTextLineHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTextLineHeightWithSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameHeight@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFrameHeight();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameHeightWithSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetFrameHeightWithSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushID@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushID@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushID_1(int int_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopID@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopID@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopID();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_begin, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetID@ImGui@@YAIPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetID@ImGui@@YAIPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetID(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextUnformatted@ImGui@@YAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextUnformatted@ImGui@@YAXPEBD0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextUnformatted([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Text@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Text@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Text([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextColored@ImGui@@YAXAEBUImVec4@@PEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextColored@ImGui@@YAXAEBUImVec4@@PEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextColored(IntPtr col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextColoredV@ImGui@@YAXAEBUImVec4@@PEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextColoredV@ImGui@@YAXAEBUImVec4@@PEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextColoredV(IntPtr col, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextDisabled@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextDisabled@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextDisabled([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextDisabledV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextDisabledV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextDisabledV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextWrapped@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextWrapped@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextWrapped([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TextWrappedV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TextWrappedV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TextWrappedV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LabelText@ImGui@@YAXPEBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LabelText@ImGui@@YAXPEBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LabelText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LabelTextV@ImGui@@YAXPEBD0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LabelTextV@ImGui@@YAXPEBD0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LabelTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BulletText@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BulletText@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BulletText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BulletTextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BulletTextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BulletTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SeparatorText@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SeparatorText@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SeparatorText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Button@ImGui@@YA_NPEBDAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Button@ImGui@@YA_NPEBDAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Button([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SmallButton@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SmallButton@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SmallButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InvisibleButton@ImGui@@YA_NPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InvisibleButton@ImGui@@YA_NPEBDAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InvisibleButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr size, ImGuiButtonFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ArrowButton@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ArrowButton@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ArrowButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiDir dir);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Checkbox@ImGui@@YA_NPEBDPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Checkbox@ImGui@@YA_NPEBDPEA_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Checkbox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPEBDPEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPEBDPEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CheckboxFlags([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* flags, int flags_value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPEBDPEAII@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CheckboxFlags@ImGui@@YA_NPEBDPEAII@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CheckboxFlags_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, uint* flags, uint flags_value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RadioButton@ImGui@@YA_NPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RadioButton@ImGui@@YA_NPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool RadioButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool active);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?RadioButton@ImGui@@YA_NPEBDPEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?RadioButton@ImGui@@YA_NPEBDPEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool RadioButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ProgressBar@ImGui@@YAXMAEBUImVec2@@PEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ProgressBar@ImGui@@YAXMAEBUImVec2@@PEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ProgressBar(float fraction, IntPtr size_arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Bullet@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Bullet@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Bullet();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Image@ImGui@@YAXPEAXAEBUImVec2@@11AEBUImVec4@@2@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Image@ImGui@@YAXPEAXAEBUImVec2@@11AEBUImVec4@@2@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Image(IntPtr user_texture_id, IntPtr size, IntPtr uv0, IntPtr uv1, IntPtr tint_col, IntPtr border_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ImageButton@ImGui@@YA_NPEBDPEAXAEBUImVec2@@22AEBUImVec4@@3@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ImageButton@ImGui@@YA_NPEBDPEAXAEBUImVec2@@22AEBUImVec4@@3@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ImageButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, IntPtr user_texture_id, IntPtr size, IntPtr uv0, IntPtr uv1, IntPtr bg_col, IntPtr tint_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginCombo@ImGui@@YA_NPEBD0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginCombo@ImGui@@YA_NPEBD0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginCombo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string preview_value, ImGuiComboFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndCombo@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndCombo@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndCombo();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAHQEBQEBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAHQEBQEBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.LPArray)] string[] items, int items_count, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string items_separated_by_zeros, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAHP6A_NPEAXHPEAPEBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Combo@ImGui@@YA_NPEBDPEAHP6A_NPEAXHPEAPEBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Combo([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, IntPtr items_getter, IntPtr data, int items_count, int popup_max_height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat@ImGui@@YA_NPEBDPEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat@ImGui@@YA_NPEBDPEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat2@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat2@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat3@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat3@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloat4@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloat4@ImGui@@YA_NPEBDQEAMMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragFloatRange2@ImGui@@YA_NPEBDPEAM1MMM00H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragFloatRange2@ImGui@@YA_NPEBDPEAM1MMM00H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragFloatRange2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v_current_min, float* v_current_max, float v_speed, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format_max, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt@ImGui@@YA_NPEBDPEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt@ImGui@@YA_NPEBDPEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt2@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt2@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt3@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt3@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragInt4@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragInt4@ImGui@@YA_NPEBDQEAHMHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragIntRange2@ImGui@@YA_NPEBDPEAH1MHH00H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragIntRange2@ImGui@@YA_NPEBDPEAH1MHH00H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragIntRange2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v_current_min, int* v_current_max, float v_speed, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format_max, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragScalar@ImGui@@YA_NPEBDHPEAXMPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragScalar@ImGui@@YA_NPEBDHPEAXMPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, float v_speed, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DragScalarN@ImGui@@YA_NPEBDHPEAXHMPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DragScalarN@ImGui@@YA_NPEBDHPEAXHMPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DragScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, float v_speed, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat2@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat2@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat3@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat3@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderFloat4@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderFloat4@ImGui@@YA_NPEBDQEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderAngle@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderAngle@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderAngle([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v_rad, float v_degrees_min, float v_degrees_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt@ImGui@@YA_NPEBDPEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt@ImGui@@YA_NPEBDPEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt2@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt2@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt3@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt3@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderInt4@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderInt4@ImGui@@YA_NPEBDQEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderScalar@ImGui@@YA_NPEBDHPEAXPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderScalar@ImGui@@YA_NPEBDHPEAXPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SliderScalarN@ImGui@@YA_NPEBDHPEAXHPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SliderScalarN@ImGui@@YA_NPEBDHPEAXHPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SliderScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderFloat@ImGui@@YA_NPEBDAEBUImVec2@@PEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderFloat@ImGui@@YA_NPEBDAEBUImVec2@@PEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, float* v, float v_min, float v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderInt@ImGui@@YA_NPEBDAEBUImVec2@@PEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderInt@ImGui@@YA_NPEBDAEBUImVec2@@PEAHHH0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, int* v, int v_min, int v_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?VSliderScalar@ImGui@@YA_NPEBDAEBUImVec2@@HPEAXPEBX30H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?VSliderScalar@ImGui@@YA_NPEBDAEBUImVec2@@HPEAXPEBX30H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool VSliderScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size, ImGuiDataType data_type, IntPtr p_data, IntPtr p_min, IntPtr p_max, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiSliderFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputText@ImGui@@YA_NPEBDPEAD_KHP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputText@ImGui@@YA_NPEBDPEAD_KHP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, sbyte* buf, UIntPtr buf_size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputTextMultiline@ImGui@@YA_NPEBDPEAD_KAEBUImVec2@@HP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputTextMultiline@ImGui@@YA_NPEBDPEAD_KAEBUImVec2@@HP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputTextMultiline([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, sbyte* buf, UIntPtr buf_size, IntPtr size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputTextWithHint@ImGui@@YA_NPEBD0PEAD_KHP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputTextWithHint@ImGui@@YA_NPEBD0PEAD_KHP6AHPEAUImGuiInputTextCallbackData@@@ZPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputTextWithHint([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string hint, sbyte* buf, UIntPtr buf_size, ImGuiInputTextFlags flags, IntPtr callback, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat@ImGui@@YA_NPEBDPEAMMM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, float step, float step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat2@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat2@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat3@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat3@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputFloat4@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputFloat4@ImGui@@YA_NPEBDQEAM0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputFloat4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt@ImGui@@YA_NPEBDPEAHHHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt@ImGui@@YA_NPEBDPEAHHHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, int step, int step_fast, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt2@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt2@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt3@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt3@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputInt4@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputInt4@ImGui@@YA_NPEBDQEAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputInt4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* v, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputDouble@ImGui@@YA_NPEBDPEANNN0H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputDouble@ImGui@@YA_NPEBDPEANNN0H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputDouble([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, double* v, double step, double step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputScalar@ImGui@@YA_NPEBDHPEAXPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputScalar@ImGui@@YA_NPEBDHPEAXPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputScalar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, IntPtr p_step, IntPtr p_step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?InputScalarN@ImGui@@YA_NPEBDHPEAXHPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?InputScalarN@ImGui@@YA_NPEBDHPEAXHPEBX20H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool InputScalarN([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiDataType data_type, IntPtr p_data, int components, IntPtr p_step, IntPtr p_step_fast, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string format, ImGuiInputTextFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorEdit3@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorEdit3@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorEdit3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorEdit4@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorEdit4@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorEdit4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorPicker3@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorPicker3@ImGui@@YA_NPEBDQEAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorPicker3([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorPicker4@ImGui@@YA_NPEBDQEAMHPEBM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorPicker4@ImGui@@YA_NPEBDQEAMHPEBM@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorPicker4([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* col, ImGuiColorEditFlags flags, float* ref_col);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorButton@ImGui@@YA_NPEBDAEBUImVec4@@HAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorButton@ImGui@@YA_NPEBDAEBUImVec4@@HAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ColorButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string desc_id, IntPtr col, ImGuiColorEditFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColorEditOptions@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColorEditOptions@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColorEditOptions(ImGuiColorEditFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPEBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPEBD0ZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNode@ImGui@@YA_NPEBXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNode@ImGui@@YA_NPEBXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNode(IntPtr ptr_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeV@ImGui@@YA_NPEBD0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeV@ImGui@@YA_NPEBD0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeV@ImGui@@YA_NPEBXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeV@ImGui@@YA_NPEBXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeV(IntPtr ptr_id, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBDH0ZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBDH0ZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBXHPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeEx@ImGui@@YA_NPEBXHPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeEx(IntPtr ptr_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPEBDH0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPEBDH0PEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeExV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPEBXHPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreeNodeExV@ImGui@@YA_NPEBXHPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TreeNodeExV(IntPtr ptr_id, ImGuiTreeNodeFlags flags, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePush@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePush@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePush([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePush@ImGui@@YAXPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePush@ImGui@@YAXPEBX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePush(IntPtr ptr_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TreePop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TreePop@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TreePop();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTreeNodeToLabelSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTreeNodeToLabelSpacing@ImGui@@YAMXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetTreeNodeToLabelSpacing();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CollapsingHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CollapsingHeader@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool CollapsingHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_visible, ImGuiTreeNodeFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemOpen@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemOpen@ImGui@@YAX_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemOpen(bool is_open, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Selectable@ImGui@@YA_NPEBD_NHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Selectable@ImGui@@YA_NPEBD_NHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Selectable([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool selected, ImGuiSelectableFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Selectable@ImGui@@YA_NPEBDPEA_NHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Selectable@ImGui@@YA_NPEBDPEA_NHAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool Selectable_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_selected, ImGuiSelectableFlags flags, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginListBox@ImGui@@YA_NPEBDAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginListBox@ImGui@@YA_NPEBDAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndListBox@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndListBox@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndListBox();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ListBox@ImGui@@YA_NPEBDPEAHQEBQEBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ListBox@ImGui@@YA_NPEBDPEAHQEBQEBDHH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, [MarshalAs(UnmanagedType.LPArray)] string[] items, int items_count, int height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ListBox@ImGui@@YA_NPEBDPEAHP6A_NPEAXHPEAPEBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ListBox@ImGui@@YA_NPEBDPEAHP6A_NPEAXHPEAPEBD@Z2HH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool ListBox([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, int* current_item, IntPtr items_getter, IntPtr data, int items_count, int height_in_items);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotLines@ImGui@@YAXPEBDPEBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotLines@ImGui@@YAXPEBDPEBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotLines([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* values, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size, int stride);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotLines@ImGui@@YAXPEBDP6AMPEAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotLines@ImGui@@YAXPEBDP6AMPEAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotLines([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr values_getter, IntPtr data, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotHistogram@ImGui@@YAXPEBDPEBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotHistogram@ImGui@@YAXPEBDPEBMHH0MMUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotHistogram([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, float* values, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size, int stride);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PlotHistogram@ImGui@@YAXPEBDP6AMPEAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PlotHistogram@ImGui@@YAXPEBDP6AMPEAXH@Z1HH0MMUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PlotHistogram([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, IntPtr values_getter, IntPtr data, int values_count, int values_offset, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string overlay_text, float scale_min, float scale_max, Vector2 graph_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, bool b);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, int v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPEBDI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPEBDI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value_2([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, uint v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Value@ImGui@@YAXPEBDM0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Value@ImGui@@YAXPEBDM0@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Value([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string prefix, float v, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string float_format);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMainMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMainMenuBar@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMainMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMainMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMainMenuBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMainMenuBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginMenu@ImGui@@YA_NPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginMenu@ImGui@@YA_NPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginMenu([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndMenu@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndMenu@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndMenu();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MenuItem@ImGui@@YA_NPEBD0_N1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MenuItem@ImGui@@YA_NPEBD0_N1@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool MenuItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string shortcut, bool selected, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MenuItem@ImGui@@YA_NPEBD0PEA_N_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MenuItem@ImGui@@YA_NPEBD0PEA_N_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool MenuItem_1([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string shortcut, bool* p_selected, bool enabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTooltip@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTooltip@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTooltip@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTooltip@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTooltip([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTooltipV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTooltipV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTooltipV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginItemTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginItemTooltip@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginItemTooltip();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemTooltip@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemTooltip@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemTooltip([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemTooltipV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemTooltipV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemTooltipV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopup@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopup@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopup([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupModal@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupModal@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupModal([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, bool* p_open, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndPopup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopup@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopup@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopup([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopup@ImGui@@YAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopup@ImGui@@YAXIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopup_1(uint id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?OpenPopupOnItemClick@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?OpenPopupOnItemClick@ImGui@@YAXPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void OpenPopupOnItemClick([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CloseCurrentPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CloseCurrentPopup@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CloseCurrentPopup();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextItem@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextItem@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextWindow@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextWindow@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextWindow([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginPopupContextVoid@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginPopupContextVoid@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginPopupContextVoid([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags popup_flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsPopupOpen@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsPopupOpen@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsPopupOpen([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiPopupFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTable@ImGui@@YA_NPEBDHHAEBUImVec2@@M@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTable@ImGui@@YA_NPEBDHHAEBUImVec2@@M@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTable([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, int column, ImGuiTableFlags flags, IntPtr outer_size, float inner_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTable@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTable@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTable();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableNextRow@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableNextRow@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableNextRow(ImGuiTableRowFlags row_flags, float min_row_height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableNextColumn@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableNextColumn@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TableNextColumn();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetColumnIndex@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetColumnIndex@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TableSetColumnIndex(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetupColumn@ImGui@@YAXPEBDHMI@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetupColumn@ImGui@@YAXPEBDHMI@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetupColumn([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTableColumnFlags flags, float init_width_or_weight, uint user_id);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetupScrollFreeze@ImGui@@YAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetupScrollFreeze@ImGui@@YAXHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetupScrollFreeze(int cols, int rows);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableHeadersRow@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableHeadersRow@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableHeadersRow();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableHeader@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableHeader@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableHeader([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetSortSpecs@ImGui@@YAPEAUImGuiTableSortSpecs@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetSortSpecs@ImGui@@YAPEAUImGuiTableSortSpecs@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr TableGetSortSpecs();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetColumnCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetColumnIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetRowIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetRowIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int TableGetRowIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnName@ImGui@@YAPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnName@ImGui@@YAPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr TableGetColumnName(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableGetColumnFlags@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableGetColumnFlags@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiTableColumnFlags TableGetColumnFlags(int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetColumnEnabled@ImGui@@YAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetColumnEnabled@ImGui@@YAXH_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetColumnEnabled(int column_n, bool v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TableSetBgColor@ImGui@@YAXHIH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TableSetBgColor@ImGui@@YAXHIH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void TableSetBgColor(ImGuiTableBgTarget target, uint color, int column_n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?Columns@ImGui@@YAXHPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?Columns@ImGui@@YAXHPEBD_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void Columns(int count, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string id, bool border);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?NextColumn@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?NextColumn@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void NextColumn();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnIndex@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetColumnIndex();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnWidth@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnWidth@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetColumnWidth(int column_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColumnWidth@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColumnWidth@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColumnWidth(int column_index, float width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnOffset@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnOffset@ImGui@@YAMH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern float GetColumnOffset(int column_index);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetColumnOffset@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetColumnOffset@ImGui@@YAXHM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetColumnOffset(int column_index, float offset_x);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetColumnsCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetColumnsCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetColumnsCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTabBar@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTabBar@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTabBar([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string str_id, ImGuiTabBarFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTabBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTabBar@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTabBar();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginTabItem@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginTabItem@ImGui@@YA_NPEBDPEA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginTabItem([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, bool* p_open, ImGuiTabItemFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndTabItem@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndTabItem@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndTabItem();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?TabItemButton@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?TabItemButton@ImGui@@YA_NPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool TabItemButton([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string label, ImGuiTabItemFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetTabItemClosed@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetTabItemClosed@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetTabItemClosed([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tab_or_docked_window_label);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToTTY@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToTTY@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToTTY(int auto_open_depth);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToFile@ImGui@@YAXHPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToFile@ImGui@@YAXHPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToFile(int auto_open_depth, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogToClipboard@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogToClipboard@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogToClipboard(int auto_open_depth);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogFinish@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogFinish@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogFinish();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogButtons@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogButtons@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogButtons();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogText@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogText@ImGui@@YAXPEBDZZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LogTextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LogTextV@ImGui@@YAXPEBDPEAD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LogTextV([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt, Object args);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDragDropSource@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDragDropSource@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginDragDropSource(ImGuiDragDropFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetDragDropPayload@ImGui@@YA_NPEBDPEBX_KH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetDragDropPayload@ImGui@@YA_NPEBDPEBX_KH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool SetDragDropPayload([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type, IntPtr data, UIntPtr sz, ImGuiCond cond);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDragDropSource@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDragDropSource@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDragDropSource();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDragDropTarget@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDragDropTarget@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginDragDropTarget();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?AcceptDragDropPayload@ImGui@@YAPEBUImGuiPayload@@PEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?AcceptDragDropPayload@ImGui@@YAPEBUImGuiPayload@@PEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr AcceptDragDropPayload([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string type, ImGuiDragDropFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDragDropTarget@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDragDropTarget@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDragDropTarget();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDragDropPayload@ImGui@@YAPEBUImGuiPayload@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDragDropPayload@ImGui@@YAPEBUImGuiPayload@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDragDropPayload();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginDisabled@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginDisabled@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void BeginDisabled(bool disabled);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndDisabled@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndDisabled@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndDisabled();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PushClipRect@ImGui@@YAXAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PushClipRect@ImGui@@YAXAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PushClipRect(IntPtr clip_rect_min, IntPtr clip_rect_max, bool intersect_with_current_clip_rect);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?PopClipRect@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?PopClipRect@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void PopClipRect();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetItemDefaultFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetItemDefaultFocus@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetItemDefaultFocus();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetKeyboardFocusHere@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetKeyboardFocusHere@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetKeyboardFocusHere(int offset);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextItemAllowOverlap@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextItemAllowOverlap@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextItemAllowOverlap();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemHovered@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemHovered(ImGuiHoveredFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemActive();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemFocused();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemClicked(ImGuiMouseButton mouse_button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemVisible@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemVisible@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemVisible();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemEdited@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemEdited@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemEdited();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemActivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemActivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemActivated();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemDeactivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemDeactivated@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemDeactivated();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemDeactivatedAfterEdit@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemDeactivatedAfterEdit@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemDeactivatedAfterEdit();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsItemToggledOpen@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsItemToggledOpen@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsItemToggledOpen();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemHovered@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemHovered@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemHovered();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemActive@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemActive();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyItemFocused@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyItemFocused();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemID@ImGui@@YAIXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemID@ImGui@@YAIXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint GetItemID();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectMin@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectMin(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectMax@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectMax(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetItemRectSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetItemRectSize@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetItemRectSize(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMainViewport@ImGui@@YAPEAUImGuiViewport@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMainViewport@ImGui@@YAPEAUImGuiViewport@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetMainViewport();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetBackgroundDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetBackgroundDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetBackgroundDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetForegroundDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetForegroundDrawList@ImGui@@YAPEAUImDrawList@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetForegroundDrawList();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsRectVisible@ImGui@@YA_NAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsRectVisible@ImGui@@YA_NAEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsRectVisible(IntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsRectVisible@ImGui@@YA_NAEBUImVec2@@0@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsRectVisible@ImGui@@YA_NAEBUImVec2@@0@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsRectVisible(IntPtr rect_min, IntPtr rect_max);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetTime@ImGui@@YANXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetTime@ImGui@@YANXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern double GetTime();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetFrameCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetFrameCount@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetFrameCount();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetDrawListSharedData@ImGui@@YAPEAUImDrawListSharedData@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetDrawListSharedData@ImGui@@YAPEAUImDrawListSharedData@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetDrawListSharedData();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStyleColorName@ImGui@@YAPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStyleColorName@ImGui@@YAPEBDH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStyleColorName(ImGuiCol idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetStateStorage@ImGui@@YAXPEAUImGuiStorage@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetStateStorage@ImGui@@YAXPEAUImGuiStorage@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetStateStorage(IntPtr storage);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetStateStorage@ImGui@@YAPEAUImGuiStorage@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetStateStorage@ImGui@@YAPEAUImGuiStorage@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetStateStorage();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?BeginChildFrame@ImGui@@YA_NIAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?BeginChildFrame@ImGui@@YA_NIAEBUImVec2@@H@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool BeginChildFrame(uint id, IntPtr size, ImGuiWindowFlags flags);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?EndChildFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?EndChildFrame@ImGui@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void EndChildFrame();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?CalcTextSize@ImGui@@YA?AUImVec2@@PEBD0_NM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?CalcTextSize@ImGui@@YA?AUImVec2@@PEBD0_NM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void CalcTextSize(IntPtr @return, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text_end, bool hide_text_after_double_hash, float wrap_width);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertU32ToFloat4@ImGui@@YA?AUImVec4@@I@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertU32ToFloat4@ImGui@@YA?AUImVec4@@I@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertU32ToFloat4(IntPtr @return, uint @in);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertFloat4ToU32@ImGui@@YAIAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertFloat4ToU32@ImGui@@YAIAEBUImVec4@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern uint ColorConvertFloat4ToU32(IntPtr @in);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertRGBtoHSV@ImGui@@YAXMMMAEAM00@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertRGBtoHSV@ImGui@@YAXMMMAEAM00@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertRGBtoHSV(float r, float g, float b, float* out_h, float* out_s, float* out_v);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ColorConvertHSVtoRGB@ImGui@@YAXMMMAEAM00@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ColorConvertHSVtoRGB@ImGui@@YAXMMMAEAM00@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ColorConvertHSVtoRGB(float h, float s, float v, float* out_r, float* out_g, float* out_b);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyDown@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyDown@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyDown(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyPressed@ImGui@@YA_NW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyPressed@ImGui@@YA_NW4ImGuiKey@@_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyPressed(ImGuiKey key, bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsKeyReleased@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsKeyReleased@ImGui@@YA_NW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsKeyReleased(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyPressedAmount@ImGui@@YAHW4ImGuiKey@@MM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyPressedAmount@ImGui@@YAHW4ImGuiKey@@MM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetKeyPressedAmount(ImGuiKey key, float repeat_delay, float rate);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyName@ImGui@@YAPEBDW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyName@ImGui@@YAPEBDW4ImGuiKey@@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetKeyName(ImGuiKey key);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextFrameWantCaptureKeyboard@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextFrameWantCaptureKeyboard@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextFrameWantCaptureKeyboard(bool want_capture_keyboard);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDown@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDown@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDown(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseClicked@ImGui@@YA_NH_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseClicked@ImGui@@YA_NH_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseClicked(ImGuiMouseButton button, bool repeat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseReleased@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseReleased@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseReleased(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDoubleClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDoubleClicked@ImGui@@YA_NH@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDoubleClicked(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseClickedCount@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseClickedCount@ImGui@@YAHH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern int GetMouseClickedCount(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseHoveringRect@ImGui@@YA_NAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseHoveringRect@ImGui@@YA_NAEBUImVec2@@0_N@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseHoveringRect(IntPtr r_min, IntPtr r_max, bool clip);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMousePosValid@ImGui@@YA_NPEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMousePosValid@ImGui@@YA_NPEBUImVec2@@@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMousePosValid(IntPtr mouse_pos);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsAnyMouseDown@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsAnyMouseDown@ImGui@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsAnyMouseDown();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMousePos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMousePos@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMousePos(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMousePosOnOpeningCurrentPopup@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMousePosOnOpeningCurrentPopup@ImGui@@YA?AUImVec2@@XZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMousePosOnOpeningCurrentPopup(IntPtr @return);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?IsMouseDragging@ImGui@@YA_NHM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?IsMouseDragging@ImGui@@YA_NHM@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool IsMouseDragging(ImGuiMouseButton button, float lock_threshold);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseDragDelta@ImGui@@YA?AUImVec2@@HM@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseDragDelta@ImGui@@YA?AUImVec2@@HM@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetMouseDragDelta(IntPtr @return, ImGuiMouseButton button, float lock_threshold);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?ResetMouseDragDelta@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?ResetMouseDragDelta@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void ResetMouseDragDelta(ImGuiMouseButton button);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetMouseCursor@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetMouseCursor@ImGui@@YAHXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiMouseCursor GetMouseCursor();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetMouseCursor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetMouseCursor@ImGui@@YAXH@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetMouseCursor(ImGuiMouseCursor cursor_type);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetNextFrameWantCaptureMouse@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetNextFrameWantCaptureMouse@ImGui@@YAX_N@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetNextFrameWantCaptureMouse(bool want_capture_mouse);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetClipboardText@ImGui@@YAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetClipboardText@ImGui@@YAPEBDXZ", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr GetClipboardText();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetClipboardText@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetClipboardText@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetClipboardText([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LoadIniSettingsFromDisk@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LoadIniSettingsFromDisk@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LoadIniSettingsFromDisk([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?LoadIniSettingsFromMemory@ImGui@@YAXPEBD_K@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?LoadIniSettingsFromMemory@ImGui@@YAXPEBD_K@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void LoadIniSettingsFromMemory([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_data, UIntPtr ini_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SaveIniSettingsToDisk@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SaveIniSettingsToDisk@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SaveIniSettingsToDisk([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string ini_filename);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SaveIniSettingsToMemory@ImGui@@YAPEBDPEA_K@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SaveIniSettingsToMemory@ImGui@@YAPEBDPEA_K@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr SaveIniSettingsToMemory(UIntPtr* out_ini_size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DebugTextEncoding@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DebugTextEncoding@ImGui@@YAXPEBD@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void DebugTextEncoding([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string text);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?DebugCheckVersionAndDataLayout@ImGui@@YA_NPEBD_K11111@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?DebugCheckVersionAndDataLayout@ImGui@@YA_NPEBD_K11111@Z", CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
             internal static extern bool DebugCheckVersionAndDataLayout([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string version_str, UIntPtr sz_io, UIntPtr sz_style, UIntPtr sz_vec2, UIntPtr sz_vec4, UIntPtr sz_drawvert, UIntPtr sz_drawidx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?SetAllocatorFunctions@ImGui@@YAXP6APEAX_KPEAX@ZP6AX11@Z1@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?SetAllocatorFunctions@ImGui@@YAXP6APEAX_KPEAX@ZP6AX11@Z1@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void SetAllocatorFunctions(IntPtr alloc_func, IntPtr free_func, IntPtr user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetAllocatorFunctions@ImGui@@YAXPEAP6APEAX_KPEAX@ZPEAP6AX11@ZPEAPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetAllocatorFunctions@ImGui@@YAXPEAP6APEAX_KPEAX@ZPEAP6AX11@ZPEAPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void GetAllocatorFunctions(IntPtr p_alloc_func, IntPtr p_free_func, IntPtr* p_user_data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MemAlloc@ImGui@@YAPEAX_K@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MemAlloc@ImGui@@YAPEAX_K@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr MemAlloc(UIntPtr size);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?MemFree@ImGui@@YAXPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?MemFree@ImGui@@YAXPEAX@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern void MemFree(IntPtr ptr);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("imgui", EntryPoint = "?GetKeyIndex@ImGui@@YA?AW4ImGuiKey@@W42@@Z", CallingConvention = CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("SubModLoaderNative", EntryPoint = "?GetKeyIndex@ImGui@@YA?AW4ImGuiKey@@W42@@Z", CallingConvention = CallingConvention.Cdecl)]
             internal static extern ImGuiKey GetKeyIndex(ImGuiKey key);
 
         }
@@ -24345,12 +24345,18 @@ namespace DearImGui
             UIntPtr param0 = (UIntPtr)0;
             return SaveIniSettingsToMemory(ref param0);
         }
+    }
+}
 
+namespace DearImGui
+{
+    internal class SubModLoaderNative
+    {
         internal static IntPtr _EmptyString_ImGuiTextBuffer__2PADA { get; }
 
-        static ImGui()
+        static SubModLoaderNative()
         {
-            var path = "imgui";
+            var path = "SubModLoaderNative";
             var image = DearImGui.SymbolResolver.LoadImage(ref path);
             if (image == IntPtr.Zero)
                 throw new DllNotFoundException(path);
